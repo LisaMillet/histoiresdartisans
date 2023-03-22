@@ -1,0 +1,5 @@
+meta_product_name: "Histoires d'Artisans"
+meta_title: "Histoires d'Artisans - Valorise le savoir-faire manuel et intellectuel des artisans d’art."
+meta_description: "Histoires d'Artisans est une association qui (re)valorise le savoir-faire manuel et intellectuel des artisans d’art."
+meta_image: "AtelierKruttt.jpg" # should exist in `app/assets/images/`
+twitter_account: "@histoireartisan"   # required for Twitter Cards

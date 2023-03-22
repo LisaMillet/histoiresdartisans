@@ -1,8 +1,18 @@
+.footer {
+  background: $beige;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: $green;
+}
+
 .footer-links {
   display: flex;
   align-items: center;
-  justify-content: space-around;
 }
+
 .footer-links a {
   color: $green;
   opacity: 1;
@@ -11,5 +21,17 @@
   padding: 0px 10px;
 }
 .footer-links a:hover {
+  opacity: 0.15;
+}
+
+.footer-copyright a {
+  color: $green;
+  opacity: 1;
+  text-decoration: none;
+  font-size: $p-font;
+  padding: 0px 10px;
+}
+
+.footer-copyright a:hover {
   opacity: 0.15;
 }
