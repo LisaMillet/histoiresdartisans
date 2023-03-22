@@ -1,0 +1,25 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-hda">
+  <div class="container-fluid">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "https://res.cloudinary.com/dvuyabyaw/image/upload/v1679515700/HdA/Fond%20Beige%20et%20Orange/Beige_Orange_2_edyfmz.jpg" %>
+    <% end %>
+
+    <nav>
+        <ul>
+            <li><a href="#">A propos de nous</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+                <li> <%= link_to 'Qui sommes-nous', about_path %> </li>
+                <li> <%= link_to 'Nous soutenir', support_path %> </li>
+                <li> <%= link_to 'Nos actualités', news_path %> </li>
+                <li> <%= link_to 'Nous contacter', contact_path %> </li>
+            </ul>
+            </li>
+            <li> <%= link_to 'Le répertoire des artisans', directory_artisans_path %> </li>
+            <li> <%= link_to 'Le blog', blog_path %> </li>
+            <li> <%= link_to 'Le podcast', podcast_path %> </li>
+        </ul>
+    </nav>
+  </div>
+  </div>
+</div>
