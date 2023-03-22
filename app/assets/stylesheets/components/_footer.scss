@@ -1,0 +1,15 @@
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer-links a {
+  color: $green;
+  opacity: 1;
+  text-decoration: none;
+  font-size: $h1-font;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 0.15;
+}

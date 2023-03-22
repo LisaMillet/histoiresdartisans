@@ -1,0 +1,14 @@
+.btn-green {
+  color: $beige;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $green;
+  opacity: 1;
+  transition: background 0.3s ease;
+}
+
+.btn-green:hover {
+  background: $green;
+  color: $beige;
+  opacity: 0.15;
+}
