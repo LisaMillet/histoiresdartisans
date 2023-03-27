@@ -24,12 +24,14 @@
   opacity: 0.15;
 }
 
-.footer-copyright a {
+.footer-copyright {
+  font-size: 0.75rem;
+  a {
   color: $green;
   opacity: 1;
   text-decoration: none;
-  font-size: $p-font;
-  padding: 0px 10px;
+  padding: 0px 1px;
+  }
 }
 
 .footer-copyright a:hover {

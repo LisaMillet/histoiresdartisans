@@ -1,0 +1,17 @@
+.field-orange-empty {
+  color: $orange;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: 1px solid $orange;
+  background: transparent;
+  width: -webkit-fill-available;
+}
+
+.field-message {
+  height: 300px
+}
+
+.field-orange-empty:focus {
+  border: 1px solid $green;
+  outline: none !important;
+}

@@ -1,0 +1,20 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= article.banner_picture %>);">
+  <div class="container">
+    <h1><%= @article.title %></h1>
+    <p><%= @article.author %></p>
+  </div>
+</div>
+
+<div class='container'>
+  <%= @article.introduction %>
+  <%= @article.first_paragraph %>
+  <%= @article.first_picture %>
+  <%= @article.second_paragraph %>
+  <%= @article.second_picture %>
+  <%= @article.third_paragraph %>
+  <%= @article.third_picture %>
+  <%= @article.fourth_paragraph %>
+  <%= @article.fourth_picture %>
+  <%= @article.fifth_paragraph %>
+  <%= @article.fifth_picture %>
+</div>
