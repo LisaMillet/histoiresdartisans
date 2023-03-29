@@ -12,3 +12,18 @@
   color: $beige;
   opacity: 0.15;
 }
+
+.btn-orange {
+  color: $beige;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $orange;
+  opacity: 1;
+  transition: background 0.3s ease;
+}
+
+.btn-orange:hover {
+  background: $orange;
+  color: $beige;
+  opacity: 0.15;
+}

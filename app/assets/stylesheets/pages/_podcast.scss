@@ -1,0 +1,16 @@
+.plateform-links {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.plateform-links a {
+  color: $orange;
+  opacity: 1;
+  text-decoration: none;
+  font-size: $h1-font;
+  padding: 10px 50px;
+}
+.plateform-links a:hover {
+  opacity: 0.15;
+}

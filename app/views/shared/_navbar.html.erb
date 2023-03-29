@@ -10,13 +10,13 @@
             <!-- First Tier Drop Down -->
             <ul>
                 <li> <%= link_to 'Qui sommes-nous', about_path %> </li>
-                <li> <%= link_to 'Nous soutenir', support_path %> </li>
+                <%# <li> <%= link_to 'Nous soutenir', support_path %> </li>
                 <li> <%= link_to 'Nos actualités', news_path %> </li>
-                <li> <%= link_to 'Nous contacter', contact_path %> </li>
+                <li> <%= link_to 'Nous contacter',  new_contact_path %> </li>
             </ul>
             </li>
             <li> <%= link_to 'Le répertoire des artisans', directory_artisans_path %> </li>
-            <li> <%= link_to 'Le blog', blog_path %> </li>
+            <li> <%= link_to 'Le blog', articles_path %> </li>
             <li> <%= link_to 'Le podcast', podcast_path %> </li>
         </ul>
     </nav>
