@@ -1,1 +1,2 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Site web de l'association Histoires d'Artisans 
+Plus d'informations www.histoiresdartisans.com
