@@ -1,20 +1,11 @@
 .banner {
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   padding: 150px 0;
 }
 
 .banner h1 {
   margin: 0;
   color: $beige;
-  text-shadow: 1px 1px 3px $dark-green;
-  font-size: $h1-font;
-  font-weight: bold;
-}
-
-.banner p {
-  font-size: $p-font;
-  color: $beige;
-  opacity: .7;
-  text-shadow: 1px 1px 3px $dark-green;
+  font-size: 64px;
 }

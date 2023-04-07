@@ -1,46 +1,30 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dvuyabyaw/image/upload/v1679585077/HdA/FoteiniPangos_1_xvb2ov.jpg);">
   <div class="container">
     <h1>Contactez-nous</h1>
-    <p>Une envie ? Une idée ? Une question ?</p>
   </div>
 </div>
 
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-3">
   <div class='col-6'>
-      <%= form_for @contact do |form| %>
+    <div class="mb-3">
+      <h2>Artisans</h2>
+      <a href="mailto:artisan@histoiresdartisans.com">artisan@histoiresdartisans.com</a>
+    </div>
 
-      <% if @contact.errors.any? %>
-        <p>Le message n'a pas pu être envoyé</p>
-      <% end %>
+    <div class="mb-3">
+      <h2>Presse</h2>
+      <a href="mailto:presse@histoiresdartisans.com">presse@histoiresdartisans.com</a>
+    </div>
 
-      <div class="mt-2 mb-2">
-        <div class='text-start'>Prénom</div>
-        <div class='text-center'><%= form.text_field :first_name, class:'field-orange-empty' %></div>
-      </div>
+    <div class="mb-3">
+      <h2>Partenariats</h2>
+      <a href="mailto:partenariat@histoiresdartisans.com">partenariat@histoiresdartisans.com</a>
+    </div>
 
-      <div class="mt-2 mb-2">
-        <div class='text-start'>Nom</div>
-        <div class='text-center'><%= form.text_field :last_name, class:'field-orange-empty' %></div>
-      </div>
+    <div class="mb-3">
+      <h2>Pour toutes autres questions :</h2>
+      <a href="mailto:contact@histoiresdartisans.com">contact@histoiresdartisans.com</a>
+    </div>
 
-      <div class="mb-2">
-        <div class='text-start'>Email</div>
-        <div class='text-center'><%= form.email_field :email, class:'field-orange-empty' %></div>
-      </div>
-
-      <div class="mb-2">
-        <div class='text-start'>Sujet</div>
-        <div class='text-center'><%= form.text_field :subject, class:'field-orange-empty' %></div>
-      </div>
-
-      <div class="mb-2">
-        <div class='text-start'>Message</div>
-        <div class='text-center'><%= form.text_area :message, class:'field-orange-empty field-message' %></div>
-      </div>
-
-      <div >
-        <%= form.submit "Envoyer", class:"btn btn-green"%>
-      </div>
-      <% end %>
   </div>
 </div>
