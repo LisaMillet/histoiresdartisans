@@ -5,7 +5,7 @@
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: $green;
+  color: $orange;
 }
 
 .footer-links {
@@ -14,20 +14,20 @@
 }
 
 .footer-links a {
-  color: $green;
+  color: $orange;
   opacity: 1;
   text-decoration: none;
   font-size: $h1-font;
   padding: 0px 10px;
 }
 .footer-links a:hover {
-  opacity: 0.15;
+  color: $green;
 }
 
 .footer-copyright {
   font-size: 0.75rem;
   a {
-  color: $green;
+  color: $orange;
   opacity: 1;
   text-decoration: none;
   padding: 0px 1px;
@@ -35,5 +35,5 @@
 }
 
 .footer-copyright a:hover {
-  opacity: 0.15;
+  color: $green;
 }
