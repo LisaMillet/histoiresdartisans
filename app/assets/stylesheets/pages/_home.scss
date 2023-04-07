@@ -1,1 +1,22 @@
-// Specific CSS for your home-page
+#home {
+  .home-grid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .home-image {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+  .home_title {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 3rem;
+  }
+
+  .home_title:hover{
+    color: $green;
+  }
+}
