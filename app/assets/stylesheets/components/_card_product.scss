@@ -1,0 +1,45 @@
+.card-product {
+  overflow: hidden;
+  height: 160px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.card-product img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-product-infos {
+  h2 {
+    font-size: $h2-font;
+    font-weight: $h2-weight;
+    margin: 0;
+    color: $green;
+  }
+
+  p {
+    font-size: $p-font;
+    font-weight: $p-weight;
+    margin-bottom: 0;
+    margin-top: 8px;
+    color: $green;
+  }
+
+  a {
+    text-decoration: none;
+    color: $orange;
+    font-size: $p-font;
+    font-weight: $h2-weight;
+  }
+
+  a:hover {
+    color: $green;
+  }
+
+}
+
+.card-product-infos {
+  width: 400px;
+}

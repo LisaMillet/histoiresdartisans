@@ -1,0 +1,13 @@
+#contacts-new {
+  h2 {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: $orange;
+  }
+
+  a:hover {
+    color: $green
+  }
+}
