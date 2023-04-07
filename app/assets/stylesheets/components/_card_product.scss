@@ -1,6 +1,6 @@
 .card-product {
   overflow: hidden;
-  height: 160px;
+  height: 200px;
   background: transparent;
   display: flex;
   align-items: center;
@@ -13,14 +13,14 @@
 
 .card-product-infos {
   h2 {
-    font-size: $h2-font;
+    font-size: 36px;
     font-weight: $h2-weight;
     margin: 0;
     color: $green;
   }
 
   p {
-    font-size: $p-font;
+    font-size: 24px;
     font-weight: $p-weight;
     margin-bottom: 0;
     margin-top: 8px;
@@ -30,7 +30,7 @@
   a {
     text-decoration: none;
     color: $orange;
-    font-size: $p-font;
+    font-size: 24px;
     font-weight: $h2-weight;
   }
 
@@ -38,8 +38,4 @@
     color: $green;
   }
 
-}
-
-.card-product-infos {
-  width: 400px;
 }
