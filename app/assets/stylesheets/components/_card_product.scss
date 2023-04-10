@@ -6,29 +6,29 @@
 //   align-items: center;
 // }
 
-// .card-product-infos {
-//   h2 {
-//     font-size: 36px;
-//     font-weight: $h2-weight;
-//     color: $green;
-//   }
+.card-product-infos {
+  h2 {
+    font-size: 36px;
+    font-weight: $h2-weight;
+    color: $green;
+  }
 
-//   p {
-//     font-size: 24px;
-//     font-weight: $p-weight;
-//     margin-top: 8px;
-//     color: $green;
-//   }
+  p {
+    font-size: 24px;
+    font-weight: $p-weight;
+    margin-top: 8px;
+    color: $green;
+  }
 
-//   a {
-//     text-decoration: none;
-//     color: $orange;
-//     font-size: 24px;
-//     font-weight: $h2-weight;
-//   }
+  a {
+    text-decoration: none;
+    color: $orange;
+    font-size: 24px;
+    font-weight: $h2-weight;
+  }
 
-//   a:hover {
-//     color: $green;
-//   }
+  a:hover {
+    color: $green;
+  }
 
-// }
+}
