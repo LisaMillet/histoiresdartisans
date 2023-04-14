@@ -20,7 +20,7 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
-    
+
     <% if Rails.env.development? %>
       <script src="https://cdn.tailwindcss.com"></script>
     <% end %>
@@ -40,7 +40,7 @@
     </script>
   </head>
 
-  <body id="<%= controller_name %>-<%= action_name %>">
+  <body class="bg-beige" id="<%= controller_name %>-<%= action_name %>">
     <%= render 'shared/navbar' %>
     <%= yield %>
     <%= render 'shared/footer' %>
