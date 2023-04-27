@@ -5,16 +5,13 @@
 
 @layer base {
   h1 {
-    @apply font-monospace;
-    @apply text-green;
+    @apply font-monospace text-green;
   }
   h2 {
-    @apply font-monospace;
-    @apply text-green;
+    @apply font-monospace text-green;
   }
   p {
-    @apply font-sans;
-    @apply text-green;
+    @apply font-sans text-green;
   }
 }
 

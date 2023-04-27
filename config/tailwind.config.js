@@ -13,16 +13,12 @@ module.exports = {
       monospace: ['Be Vietnam Pro', 'sans-serif'],
       sans: ['Roboto Mono', 'monospace'],
     },
-
     colors: {
       'dark-green': '#002428',
       'green': '#00594F',
       'dark-orange': '#963900',
       'orange': '#B94700',
       'beige': '#F2E7DD',
-    },
-
-    extend: {
     },
   },
   plugins: [
