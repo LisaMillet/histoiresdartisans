@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
 
-@layer components {
+@layer base {
+  h1 {
+    @apply font-monospace text-green;
+  }
+  h2 {
+    @apply font-monospace text-green;
+  }
+  p {
+    @apply font-sans text-green;
+  }
+}
+
+/* @layer components {
   .btn-primary {
     @apply py-2 px-4 bg-blue-200;
   }

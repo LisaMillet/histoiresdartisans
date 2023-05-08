@@ -5,13 +5,20 @@ module.exports = {
     './public/*.html',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
-    './app/views/**/*.{erb,haml,html,slim}'
+    './app/views/**/*.{erb,haml,html,slim}',
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
+    fontFamily: {
+      monospace: ['Be Vietnam Pro', 'sans-serif'],
+      sans: ['Roboto Mono', 'monospace'],
+    },
+    colors: {
+      'dark-green': '#002428',
+      'green': '#00594F',
+      'dark-orange': '#963900',
+      'orange': '#B94700',
+      'beige': '#F2E7DD',
     },
   },
   plugins: [
@@ -19,5 +26,6 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
+    require('flowbite/plugin'),
   ]
 }

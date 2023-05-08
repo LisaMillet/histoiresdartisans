@@ -2,7 +2,10 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
+
 import "stylesheets/application";
 import "tailwindcss/base";
 import "tailwindcss/components";
 import "tailwindcss/utilities";
+
+import 'flowbite'

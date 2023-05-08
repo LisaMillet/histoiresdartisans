@@ -21,7 +21,7 @@
     <meta name="twitter:image:src" content="<%= meta_image %>">
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    
+
     <% if Rails.env.development? %>
       <script src="https://cdn.tailwindcss.com"></script>
     <% end %>
@@ -41,7 +41,7 @@
     </script>
   </head>
 
-  <body id="<%= controller_name %>-<%= action_name %>">
+  <body class="bg-beige" id="<%= controller_name %>-<%= action_name %>">
     <%= render 'shared/navbar' %>
     <%= yield %>
     <%= render 'shared/footer' %>
