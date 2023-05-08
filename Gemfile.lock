@@ -228,11 +228,8 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
-<<<<<<< HEAD
-=======
     tailwindcss-rails (2.0.27-arm64-darwin)
       railties (>= 6.0.0)
->>>>>>> master
     tailwindcss-rails (2.0.27-x86_64-linux)
       railties (>= 6.0.0)
     thor (1.2.1)
