@@ -1,4 +1,12 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const {colors: defaultTheme} = require('tailwindcss/defaultTheme')
+
+const colors = {
+  ...defaultTheme,
+  ...{
+
+  }
+}
+
 
 module.exports = {
   content: [
@@ -14,12 +22,11 @@ module.exports = {
       sans: ['Roboto Mono', 'monospace'],
     },
     colors: {
-      'dark-green': '#002428',
-      'green': '#00594F',
-      'dark-orange': '#963900',
-      'orange': '#B94700',
-      'beige': '#F2E7DD',
-    },
+    'dark-green': '#002428',
+    'green': '#00594F',
+    'dark-orange': '#963900',
+    'orange': '#B94700',
+    'beige': '#F2E7DD',
   },
   plugins: [
     require('@tailwindcss/forms'),
@@ -27,5 +34,6 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
     require('flowbite/plugin'),
-  ]
+  ],
+},
 }
