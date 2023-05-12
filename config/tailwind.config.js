@@ -1,25 +1,17 @@
 const {colors: defaultTheme} = require('tailwindcss/defaultTheme')
 
-const colors = {
-  ...defaultTheme,
-  ...{
-
-  }
-}
-
-
 module.exports = {
   content: [
     './public/*.html',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
     './app/views/**/*.{erb,haml,html,slim}',
-    "./node_modules/flowbite/**/*.js",
+    './node_modules/flowbite/**/*.js'
   ],
   theme: {
     fontFamily: {
-      monospace: ['Be Vietnam Pro', 'sans-serif'],
-      sans: ['Roboto Mono', 'monospace'],
+      monospace: ['Roboto Mono', 'monospace'],
+      sans: ['Be Vietnam Pro', 'sans-serif'],
     },
     colors: {
     'dark-green': '#002428',
@@ -33,7 +25,7 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
-    require('flowbite/plugin'),
+    require('flowbite/plugin')
   ],
 },
 }
