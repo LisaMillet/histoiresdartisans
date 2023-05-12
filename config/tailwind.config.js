@@ -20,6 +20,11 @@ module.exports = {
     'orange': '#B94700',
     'beige': '#F2E7DD',
   },
+  extend: {
+    width: {
+      '128': '32rem',
+    },
+  },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
