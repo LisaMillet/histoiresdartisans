@@ -8,7 +8,7 @@
 
 <div class=' lg:px-12 px-6 mx-auto'>
     <h1>Le message a bien été envoyé</h1>
-    <p class="text-3xl lg:text-base font-sans mt-3">Nous reviendrons vers vous rapidement. En attendant, nous vous invitons à écouter notre <%= link_to 'podcast', podcast_path %> et à nous suivre sur les réseaux</p>
+    <p class="text-3xl md:text-xl lg:text-base font-sans mt-3">Nous reviendrons vers vous rapidement. En attendant, nous vous invitons à écouter notre <%= link_to 'podcast', podcast_path %> et à nous suivre sur les réseaux</p>
 </div>
 
 
@@ -19,7 +19,7 @@
 <%= form_for @contact do |form| %>
 
       <% if @contact.errors.any? %>
-        <p class="text-3xl lg:text-base font-sans mt-3">Le message n'a pas pu être envoyé</p>
+        <p class="text-3xl md:text-xl lg:text-base font-sans mt-3">Le message n'a pas pu être envoyé</p>
       <% end %>
 
       <div class="mt-2 mb-2">
