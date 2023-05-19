@@ -25,4 +25,7 @@ class PagesController < ApplicationController
 
   def partnership
   end
+
+  def visite
+  end
 end
