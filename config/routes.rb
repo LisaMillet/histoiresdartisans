@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/repertoire_artisans', to: 'pages#directory_artisans', as: 'directory_artisans'
   get '/podcast', to: 'pages#podcast', as: 'podcast'
   get '/newsletter', to: 'pages#newsletter', as: 'newsletter'
+  get '/visite', to: 'pages#visite', as: 'visite'
 
   # Partenariats
   get '/partenariat', to: 'pages#partnership', as: 'partnership'
