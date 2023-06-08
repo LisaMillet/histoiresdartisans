@@ -1,11 +1,34 @@
-<div class="footer">
-  <div class="footer-links">
-    <a href="https://instagram.com/histoiresdartisans/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://facebook.com/histoiresdartisans" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://twitter.com/histoireartisan" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://fr.linkedin.com/company/histoiresdartisans?trk=organization_guest_main-feed-card_feed-reaction-header" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    Site web créé par<a href="https://www.linkedin.com/in/lisa-millet" target="_blank">Lisa Millet</a>
-  </div>
+<div class="lg:p-12 p-6 mx-auto">
+  <div class="grid grid-cols-1 items-center lg:grid-cols-3">
+    <div class="grid justify-items-start">
+      <p class="text-3xl lg:text-base font-sans font-bold mb-1">Inscrivez-vous à notre newsletter !</p>
+      <%= link_to "S'abonner", newsletter_path, class:"block rounded-sm bg-orange hover:bg-green hover:text-beige text-beige font-bold text-3xl lg:text-base font-sans text-center py-2 px-4" %>
+    </div>
+
+    <div class="flex flex-row lg:mt-4 space-x-6 justify-end lg:justify-center mt-0 text-5xl lg:text-3xl">
+      <a href="https://facebook.com/histoiresdartisans" class="text-green hover:text-orange" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://instagram.com/histoiresdartisans/" class="text-green hover:text-orange" target="_blank">
+          <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/histoireartisan" class="text-green hover:text-orange" target="_blank">
+          <i class="fab fa-twitter"></i>
+      </a>
+      <a
+        href="https://fr.linkedin.com/company/histoiresdartisans?trk=organization_guest_main-feed-card_feed-reaction-header"
+        class="text-green hover:text-orange"
+        target="_blank">
+          <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+
+    <div class="grid justify-items-start lg:justify-items-end">
+      <span class="text-2xl lg:text-base text-green font-monospace">© 2023<a
+          href="https://www.linkedin.com/in/lisa-millet"
+          class="hover:underline"
+          target="_blank">
+          Lisa Millet</a>
+      </span>
+    </div>
 </div>

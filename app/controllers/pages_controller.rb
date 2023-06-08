@@ -22,5 +22,10 @@ class PagesController < ApplicationController
 
   def podcast
   end
-  
+
+  def partnership
+  end
+
+  def visite
+  end
 end
