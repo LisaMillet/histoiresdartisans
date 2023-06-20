@@ -23,9 +23,11 @@ module.exports = {
   extend: {
     width: {
       '128': '32rem',
+      '320': '40rem',
     },
     height: {
       '128': '32rem',
+      '320': '40rem',
     },
   },
   plugins: [
