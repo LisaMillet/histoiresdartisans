@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # Partenariats
   get '/partenariat', to: 'pages#partnership', as: 'partnership'
   get 'partenariat/civ', to: 'partnership#civ', as: 'civ'
+  get 'partenariat/loem', to: 'partnership#loem', as: 'loem'
 
   # Articles
   resources :articles, only: %i[index]
