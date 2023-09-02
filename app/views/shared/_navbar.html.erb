@@ -4,7 +4,7 @@
     <%= link_to root_path, class: "flex items-center" do %>
       <img
         src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1679515699/HdA/Transparents/Orange_Transparent/Orange_1_-small_lf1gm9.png"
-        class="h-28 lg:h-14 mx-auto"
+        class="h-32 lg:h-14 mx-auto"
         alt="Histoires d'Artisans Logo" />
     <% end %>
 
@@ -34,7 +34,7 @@
         <li>
           <button id="dropdownNavbarLink"
             data-dropdown-toggle="targetEl1"
-            class="text-3xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2">
+            class="text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2">
             A propos de nous
             <svg
               class="w-5 h-5 ml-1"
@@ -50,13 +50,13 @@
               </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="targetEl1" class="z-10 hidden font-monospace bg-beige divide-y divide-green shadow">
+            <div id="targetEl1" class="z-50 hidden font-monospace bg-beige divide-y divide-green shadow">
                 <ul class="py-2 px-4 text-sm text-green" aria-labelledby="dropdownLargeButton">
                   <li>
-                    <%= link_to 'Qui sommes-nous', about_path, class:"text-3xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
+                    <%= link_to 'Qui sommes-nous', about_path, class:"text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
                   </li>
                   <li>
-                    <%= link_to 'Nous soutenir', support_path, class:"text-3xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
+                    <%= link_to 'Nous soutenir', support_path, class:"text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
                   </li>
                 </ul>
             </div>
@@ -64,7 +64,7 @@
         <li>
           <button id="dropdownNavbarLink"
             data-dropdown-toggle="targetEl2"
-            class="text-3xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2">
+            class="text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2">
             Nos actions
             <svg
               class="w-5 h-5 ml-1"
@@ -80,25 +80,25 @@
               </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="targetEl2" class="z-10 hidden font-monospace bg-beige divide-y divide-green shadow">
+            <div id="targetEl2" class="z-50 hidden font-monospace bg-beige divide-y divide-green shadow">
                 <ul class="py-2 px-4 text-sm text-green" aria-labelledby="dropdownLargeButton">
                   <li>
-                    <%= link_to "Nos visites d'ateliers", visite_path, class:"text-3xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
+                    <%= link_to "Nos visites d'ateliers", visite_path, class:"text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
                   </li>
                   <li>
-                    <%= link_to 'Notre podcast', podcast_path, class:"text-3xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
+                    <%= link_to 'Notre podcast', podcast_path, class:"text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
                   </li>
                   <li>
-                    <%= link_to "Notre répertoire d'artisans", directory_artisans_path, class:"text-3xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
+                    <%= link_to "Notre répertoire d'artisans", directory_artisans_path, class:"text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
                   </li>
                 </ul>
             </div>
         </li>
         <li>
-          <%= link_to "Nos partenaires", partnership_path, class:"text-3xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
+          <%= link_to "Nos partenaires", partnership_path, class:"text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
         </li>
         <li>
-          <%= link_to "Nous contacter", new_contact_path, class:"text-3xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
+          <%= link_to "Nous contacter", new_contact_path, class:"text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
         </li>
       </ul>
     </div>

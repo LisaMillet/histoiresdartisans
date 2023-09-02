@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root to: "pages#home"
-  resources :articles, only: %i[index show]
   resources :contacts, only: %i[new create]
   get 'contacts/sent', to: 'contacts#sent', as: 'sent_contact'
   get '/qui_sommes_nous', to: 'pages#about', as: 'about'
@@ -15,4 +14,10 @@ Rails.application.routes.draw do
   # Partenariats
   get '/partenariat', to: 'pages#partnership', as: 'partnership'
   get 'partenariat/civ', to: 'partnership#civ', as: 'civ'
+  get 'partenariat/loem', to: 'partnership#loem', as: 'loem'
+
+  # Articles
+  resources :articles, only: %i[index]
+  get 'articles/civ', to: 'articles#civ', as: 'articleciv'
+
 end
