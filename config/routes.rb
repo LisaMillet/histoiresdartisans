@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   resources :articles, only: %i[index]
   get 'articles/civ', to: 'articles#civ', as: 'articleciv'
 
+  # Posts with SAAS
+  resources :posts, only: %i[index]
 end
