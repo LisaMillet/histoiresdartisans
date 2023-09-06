@@ -1,0 +1,14 @@
+<div class="container mx-auto mt-8" >
+  <p style="color: green"><%= notice %></p>
+
+  <h1 class="text-center">Tous nos articles</h1>
+  <%# Access to this button has to be protected %>
+  <%= link_to "+ Nouvel Article", new_post_path, class:"rounded-sm bg-orange hover:bg-green hover:text-beige text-beige font-bold text-3xl lg:text-base font-sans text-center mb-1 py-2 px-4" %>
+
+  <div id="posts-index" class="mt-5">
+    <% @posts.each do |post| %>
+      <%= render post %>
+    <% end %>
+  </div>
+
+</div>
