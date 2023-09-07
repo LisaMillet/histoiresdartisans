@@ -2,6 +2,7 @@
 
   <div class="form-inputs">
     <%= f.input :title, label:"Titre", class:"" %>
+    <%= f.text_area :content, class: "tinymce" %>
     <%= f.input :author, label:"Auteur(e)"%>
   </div>
   <%= f.submit "Publier cet article", class:"py-3 text-4xl lg:text-xl font-bold font-sans text-green hover:text-orange
