@@ -112,6 +112,8 @@ GEM
     ffi (1.15.5)
     font-awesome-sass (6.3.0)
       sassc (~> 2.0)
+    friendly_id (5.4.2)
+      activerecord (>= 4.0.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     http-accept (1.7.0)
@@ -274,6 +276,7 @@ DEPENDENCIES
   debug
   dotenv-rails
   font-awesome-sass (~> 6.1)
+  friendly_id (~> 5.4.0)
   jbuilder
   jsbundling-rails
   mail_form
