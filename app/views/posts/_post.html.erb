@@ -9,7 +9,7 @@
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-green dark:text-white"><%= post.title.size > 30 ? post.title.first(30) << "..." : post.title %></h5>
         </a>
         <h6 class="mb-2 text-gray-400 dark:text-white">Par <%= post.author %></h6>
-        <h5 class="italic text-gray-400 mb-2"><%= raw post.content.first(50) %>...</h5>
+        <h5 class="italic text-gray-400 mb-2"><%= raw post.content %>...</h5>
 
         <%# <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= post.content %>
         <%# </p> %>
@@ -23,5 +23,3 @@
   </div>
 
 </div>
-
-
