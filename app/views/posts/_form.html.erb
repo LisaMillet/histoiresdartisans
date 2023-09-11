@@ -4,6 +4,7 @@
     <%= f.input :title, label:"Titre" %>
     <%= f.input :author, label:"Auteur(e)" %>
     <%= f.text_area :content, class: "tinymce" %>
+    <%= f.input :photo, as: :file %>
   </div>
   <%= f.submit "Publier cet article", class:"py-3 text-4xl lg:text-xl font-bold font-sans text-green hover:text-orange
   " %>
