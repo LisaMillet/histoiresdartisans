@@ -1,3 +1,10 @@
 <div class="container mx-auto mt-8">
- <%= raw @post.content %>
+  <%= link_to "Retourner aux articles", posts_path %>
+  <%= link_to post_path(@post), class: "red", data: { turbo_method: :delete,turbo_confirm: "Are you sure?" } do %>
+	  <i class="fa-regular fa-trash-can"></i>Supprimer le post
+  <% end %>
+  <%= link_to edit_post_path(@post), class: "btn btn-link" do %>
+    <i class="fa-regular fa-pen-to-square"></i> Editer le post
+  <% end %>
+  <%= raw @post.content %>
 </div>

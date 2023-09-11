@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   get 'articles/civ', to: 'articles#civ', as: 'articleciv'
 
   # Posts with SAAS
-  resources :posts, only: %i[index new create show]
+  resources :posts, only: %i[index new create show destroy edit update]
 end
