@@ -1,8 +1,10 @@
-<div id="post" class="mb-4">
+<div id="post" class="h-auto max-w-full rounded-lg max-w-sm bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 mb-4">
 
-  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="">
     <%= link_to post_path(post) do %>
-      <%= cl_image_tag post.photo.key, height: 300, width: 400, crop: :fill %>
+      <div>
+        <%= cl_image_tag post.photo.key, height: 300, width: 700, crop: :fill, class:"rounded-lg" %>
+      </div>
       <div class="p-5">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-green dark:text-white"><%= post.title.size > 30 ? post.title.first(30) << "..." : post.title %></h5>
         <h6 class="mb-2 text-gray-400 dark:text-white">Par <%= post.author %></h6>
