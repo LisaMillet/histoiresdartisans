@@ -3,6 +3,7 @@
   <div class="">
     <%= link_to post_path(post) do %>
       <div>
+      <%# picture of a post %>
         <%= cl_image_tag post.photo.key, height: 300, width: 700, crop: :fill, class:"rounded-lg" %>
       </div>
       <div class="p-5">
