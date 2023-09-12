@@ -1,0 +1,25 @@
+<%= simple_form_for(@post) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :title, label:"Titre", class:"" %>
+    <%= f.text_area :content, class: "tinymce" %>
+    <%= f.input :author, label:"Auteur(e)"%>
+  </div>
+  <%= f.submit "Publier cet article", class:"py-3 text-4xl lg:text-xl font-bold font-sans text-green hover:text-orange
+  " %>
+
+<% end %>
+<script>
+  tinymce.init({
+  selector: 'textarea',
+  plugins: 'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
+  toolbar: 'undo redo | blocks | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+  tinycomments_mode: 'embedded',
+  tinycomments_author: 'Author name',
+  mergetags_list: [
+    { value: 'First.Name', title: 'First Name' },
+    { value: 'Email', title: 'Email' },
+  ],
+  ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant"))
+    });
+</script>
