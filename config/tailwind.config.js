@@ -19,6 +19,7 @@ module.exports = {
     'dark-orange': '#963900',
     'orange': '#B94700',
     'beige': '#F2E7DD',
+    'red' : '#F05252',
   },
   extend: {
     width: {
