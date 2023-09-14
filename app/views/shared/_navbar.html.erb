@@ -102,7 +102,7 @@
         </li>
         <li>
           <% if user_signed_in? %>
-            <p><%= current_user.email %><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %></p>
+            <p>Bonjour <%= current_user.email %> | <%= link_to "Deconnexion", destroy_user_session_path, data: {turbo_method: :delete} %></p>
         <% else %>
             <%= link_to "Login", new_user_session_path %>
         <% end %>

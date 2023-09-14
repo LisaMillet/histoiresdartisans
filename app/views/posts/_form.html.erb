@@ -1,9 +1,9 @@
-<%= simple_form_for @post, html: { data:  { controller: 'text' } } do |f| %>
+<%= simple_form_for @post, html: { data:  { controller: 'tinymce' } } do |f| %>
 
   <div class="form-inputs">
     <%= f.input :title, label:"Titre" %>
     <%= f.input :author, label:"Auteur(e)" %>
-    <%= f.text_area :content, class: "tinymce" %>
+    <%= f.input :content, as: :text, class: "tinymce", input_html: { data: { tinymce_target: 'input' } } %>
     <%= f.input :photo, as: :file %>
   </div>
   <%= f.submit "Publier cet article", class:"py-3 text-4xl lg:text-xl font-bold font-sans text-green hover:text-orange
