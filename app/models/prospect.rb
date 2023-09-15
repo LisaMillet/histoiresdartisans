@@ -18,6 +18,7 @@ class Prospect < ApplicationRecord
   validates :first_name, :last_name, :email, :position, :company, presence: true
   validates :position, inclusion: { in: POSITIONS }
   after_create :clean_infos
+  after_create_commit :store_in_csv
 
   private
 
@@ -42,5 +43,14 @@ class Prospect < ApplicationRecord
         word.capitalize
       end
     end.join(' ')
+  end
+
+  def store_in_csv
+    filepath = "public/csv/prospects.csv"
+
+    CSV.open(filepath, "wb") do |csv|
+      csv << %w[Prénom Nom email Fonction Entreprise]
+      csv << [first_name, last_name, email, position, company]
+    end
   end
 end
