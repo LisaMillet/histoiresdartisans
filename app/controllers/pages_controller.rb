@@ -28,4 +28,7 @@ class PagesController < ApplicationController
 
   def visite
   end
+
+  def white_books
+  end
 end
