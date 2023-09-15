@@ -18,20 +18,20 @@ class Prospect < ApplicationRecord
   validates :first_name, :last_name, :email, :position, :company, presence: true
   validates :position, inclusion: { in: POSITIONS }
   after_create :clean_infos
-  after_create_commit :store_in_csv
+  after_create_commit :store_in_prospects_csv
 
   private
 
   def clean_infos
     update(
       first_name: first_name.strip.titleize,
-      last_name: last_name_clean,
+      last_name: clean_last_name,
       email: email.strip.downcase,
       company: company.strip
     )
   end
 
-  def last_name_clean
+  def clean_last_name
     exceptions = %w[des de du le la]
 
     last_name.strip.split.map do |word|
@@ -45,12 +45,13 @@ class Prospect < ApplicationRecord
     end.join(' ')
   end
 
-  def store_in_csv
-    filepath = "public/csv/prospects.csv"
+  def newsletter_inscription?
+    newsletter ? 'Inscrit' : 'Non Inscrit'
+  end
 
-    CSV.open(filepath, "wb") do |csv|
-      csv << %w[Prénom Nom email Fonction Entreprise]
-      csv << [first_name, last_name, email, position, company]
-    end
+  def store_in_prospects_csv
+    filepath = 'storage/csv/prospects.csv'
+
+    CSV.open(filepath, 'a') { |csv| csv << [id, first_name, last_name, email, position, company, newsletter_inscription?] }
   end
 end
