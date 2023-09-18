@@ -8,15 +8,16 @@ export default class extends Controller {
     'downloadButton',
     'form',
     'input',
-    'buttonForm'
+    'buttonForm',
+    'buttonDL'
   ]
 
   bannedDomains = [
     // 'yopmail.com',
     // 'jokemail.com'
   ]
-  emailRegexp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-  validEmail = false
+  emailRegexp   = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+  validEmail    = false
 
   connect() {
     console.log('Form Prospect Connected')
@@ -27,6 +28,7 @@ export default class extends Controller {
     const btn           = event.target
     const form          = this.formTargets.find(formProspect => formProspect.dataset.id === btn.dataset.id)
     this.activeFormID   = btn.dataset.id
+    const btnForm       = this.buttonFormTargets.find(button => button.dataset.id === this.activeFormID)
 
     this.divFormTargets.forEach(div => {
       if (div.dataset.id === btn.dataset.id) {
@@ -38,7 +40,8 @@ export default class extends Controller {
         });
         div.classList.add('hidden')
         form.reset()
-        this.validEmail = false
+        this.validEmail   = false
+        btnForm.disabled  = true
       }
     });
   }
@@ -47,7 +50,7 @@ export default class extends Controller {
     const email         = event.target.value.trim()
     const [, domain]    = email.split('@')
 
-    if (!this.bannedDomains.includes(domain) && this.emailRegexp.test(email) ) {
+    if (!this.bannedDomains.includes(domain) && this.emailRegexp.test(email)) {
       this.validEmail = true
     } else {
       this.validEmail = false
@@ -59,12 +62,21 @@ export default class extends Controller {
     const lastName    = inputs.find(input => input.id === 'prospect_last_name').value
     const firstName   = inputs.find(input => input.id === 'prospect_first_name').value
     const company     = inputs.find(input => input.id === 'prospect_company').value
-    const btn         = this.buttonFormTargets.find(button => button.dataset.id = this.activeFormID)
+    const btn         = this.buttonFormTargets.find(button => button.dataset.id === this.activeFormID)
 
     if (firstName && lastName && company && this.validEmail) {
       btn.disabled = false
     } else {
       btn.disabled = true
     }
+  }
+
+  toggleDownload() {
+    const btnDL         = this.buttonDLTargets.find(button => button.dataset.id === this.activeFormID)
+    const btnSubmit     = this.buttonFormTargets.find(button => button.dataset.id === this.activeFormID)
+
+    btnSubmit.disabled  = true
+    btnDL.click()
+    event.target.reset()
   }
 }

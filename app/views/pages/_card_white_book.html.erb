@@ -21,7 +21,8 @@
     <div class='w-full h-50 flex flex-col justify-center items-center py-4 hidden'
           data-form-prospect-target='divForm' data-id='<%= num %>'>
       <%= simple_form_for prospect, html: { class: 'simple_form new_prospect flex flex-col justify-center items-center w-[60%]  gap-[2em]',
-                                            data: { form_prospect_target: 'form', id: num } } do |f| %>
+                                            data: { form_prospect_target: 'form', id: num,
+                                                    action: 'turbo:submit-end->form-prospect#toggleDownload' } } do |f| %>
         <%= f.input :email, placeholder: 'Email*',
                             wrapper_html: { class: 'w-full' },
                             label: false,
@@ -58,9 +59,11 @@
           <%= f.label :newsletter, 'Cochez cette case si vous souhaitez être inscrit à notre newsletter', class: 'text-sm pl-1' %>
         </div>
 
-        <%= link_to '', 'download/test.jpg', download: 'test.jpg', class: 'hidden' %>
+        <%= link_to '', 'download/test.jpg', download: 'test.jpg', class: 'hidden',
+                                              data: { id: num, form_prospect_target: 'buttonDL' } %>
         <%= f.submit 'Télécharger', class: 'block rounded-sm bg-orange disabled:bg-orange disabled:opacity-80 disabled:cursor-auto hover:bg-green hover:text-beige text-beige font-bold text-3xl lg:text-base font-sans text-center py-2 px-4 cursor-pointer',
-                                    disabled: true, data: { form_prospect_target: 'buttonForm', id: num } %>
+                                    data: { form_prospect_target: 'buttonForm', id: num },
+                                    disabled: true %>
       <% end %>
     </div>
   </div>
