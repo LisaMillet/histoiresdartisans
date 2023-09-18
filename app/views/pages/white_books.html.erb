@@ -10,7 +10,7 @@
 <%# CARDS CONTAINER%>
 <div class="w-full mt-8 flex flex-col justify-center items-center gap-[2em]">
 
-  <%# CARD ONE %>
+<%# CARD ONE %>
   <div class="w-4/5 flex flex-col items-center bg-beige rounded-sm shadow overflow-hidden">
     <%# Image + Content %>
     <div class='h-50 flex'>
@@ -28,7 +28,7 @@
     </div>
 
     <%# Form of prospects %>
-    <div class='w-full h-50 flex flex-col justify-center items-center py-4'>
+    <div class='w-full h-50 flex flex-col justify-center items-center py-4 hidden'>
       <%= simple_form_for @prospect, html: { class: 'simple_form new_prospect flex flex-col justify-center items-center w-[60%]  gap-[2em]' } do |f| %>
         <%= f.input :email, placeholder: 'Email*',
                             wrapper_html: { class: 'w-full' },
@@ -64,4 +64,5 @@
       <% end %>
     </div>
   </div>
+<%# END OF CARD ONE %>
 </div>
