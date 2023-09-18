@@ -11,24 +11,38 @@
 <div class="w-full mt-8 flex flex-col justify-center items-center gap-[2em]">
 
   <%# CARD ONE %>
-  <div class="w-4/5 h-[200px] flex items-center bg-beige rounded-sm shadow overflow-hidden">
-    <%= image_tag 'AtelierKruttt.jpg', alt: "ImageLivreBlanc", class: 'h-full' %>
-    <%# Content %>
-    <div class='h-full ms-4 grid'>
-      <h4 class='text-2xl'>Lorem ipsum</h4>
-      <p class="text-sm m-0">
-        Ipsum eu nostrud nisi do consequat consequat deserunt incididunt duis ipsum aute incididunt. Non ut mollit do exercitation labore eiusmod magna deserunt ea veniam esse velit. Exercitation tempor occaecat ipsum tempor veniam officia. Veniam tempor in est dolore Lorem labore et deserunt incididunt.
-      </p>
-      <%= link_to 'Téléchargement', '#', class: 'block rounded-sm bg-orange hover:bg-green hover:text-beige text-beige font-bold text-3xl lg:text-base font-sans text-center py-2 px-4 w-[165px] h-[40px]' %>
+  <div class="w-4/5 flex flex-col items-center bg-beige rounded-sm shadow overflow-hidden">
+    <%# Image + Content %>
+    <div class='h-50 flex'>
+      <%= image_tag 'AtelierKruttt.jpg', alt: "ImageLivreBlanc", class: 'h-full w-[300px]' %>
+      <%# Content %>
+      <div class='ms-4 grid'>
+        <h4 class='text-2xl'>Lorem ipsum</h4>
+        <p class="text-sm m-0">
+          Ipsum eu nostrud nisi do consequat consequat deserunt incididunt duis ipsum aute incididunt. Non ut mollit do exercitation labore eiusmod magna deserunt ea veniam esse velit. Exercitation tempor occaecat ipsum tempor veniam officia. Veniam tempor in est dolore Lorem labore et deserunt incididunt.
+        </p>
+        <div class='w-[165px] h-[40px]'>
+          <%= link_to 'Téléchargement', '#', class: 'block rounded-sm bg-orange hover:bg-green hover:text-beige text-beige font-bold text-3xl lg:text-base font-sans text-center py-2 px-4 w-[165px] h-[40px]' %>
+        </div>
+      </div>
     </div>
     <%# Form of prospects %>
-    <div>
+    <div class='w-full h-50'>
+      <%= simple_form_for @prospect do |f| %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :email %>
+        <%= f.input :position %>
+        <%= f.input :company %>
+        <%= f.input :newsletter, as: :boolean %>
+        <%= f.submit 'Télécharger', class: 'block rounded-sm bg-orange hover:bg-green hover:text-beige text-beige font-bold text-3xl lg:text-base font-sans text-center py-2 px-4 cursor-pointer' %>
+      <% end %>
     </div>
   </div>
 
   <%# CARD TWO %>
   <div class="w-4/5 h-[200px] flex items-center bg-beige rounded-sm shadow overflow-hidden">
-    <%= image_tag 'AtelierKruttt.jpg', alt: "ImageLivreBlanc", class: 'h-full' %>
+    <%= image_tag 'AtelierKruttt.jpg', alt: "ImageLivreBlanc", class: 'h-full w-[300px]' %>
     <%# Content %>
     <div class='h-full ms-4 grid'>
       <h4 class='text-2xl'>Lorem ipsum</h4>
@@ -41,7 +55,7 @@
 
   <%# CARD THREE %>
   <div class="w-4/5 h-[200px] flex items-center bg-beige rounded-sm shadow overflow-hidden">
-    <%= image_tag 'AtelierKruttt.jpg', alt: "ImageLivreBlanc", class: 'h-full' %>
+    <%= image_tag 'AtelierKruttt.jpg', alt: "ImageLivreBlanc", class: 'h-full w-[300px]' %>
     <%# Content %>
     <div class='h-full ms-4 grid'>
       <h4 class='text-2xl'>Lorem ipsum</h4>

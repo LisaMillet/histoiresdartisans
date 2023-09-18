@@ -30,5 +30,6 @@ class PagesController < ApplicationController
   end
 
   def white_books
+    @prospect = Prospect.new
   end
 end
