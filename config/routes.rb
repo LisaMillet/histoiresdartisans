@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   # Livres blancs w/ prospects
   get 'livres_blancs', to: 'pages#white_books', as: 'white_books'
+  resources :prospects, only: :create
 
   # Articles
   resources :articles, only: %i[index]

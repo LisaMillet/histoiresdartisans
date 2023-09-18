@@ -1,0 +1,2 @@
+class ProspectsController < ApplicationController
+end
