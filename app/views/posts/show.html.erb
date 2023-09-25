@@ -1,16 +1,19 @@
 <div class="container mx-auto mt-8">
 
-  <%# links readable if a user is signed in with Devise %>
-  <% if user_signed_in? %>
-    <%= link_to "Retourner aux articles", posts_path, class:"ms-4" %>
-    <%= link_to edit_post_path(@post), class: "text-orange ms-4" do %>
-      <i class="fa-regular fa-pen-to-square"></i> Editer le post
-    <% end %>
-    <%= link_to post_path(@post), class: "text-red ms-4", data: { turbo_method: :delete,turbo_confirm: "Are you sure?" } do %>
-      <i class="fa-regular fa-trash-can"></i>Supprimer le post
-    <% end %>
-  <% end %>
-  <%# <%  %>
+  <%# breadcrumb bar - sorte de fil d'ariane %>
+  <%= render "breadcrumb", post: @post %>
+  <%# ... %>
 
+  <%# links readable if a user is signed in with Devise %>
+  <div class="flex justify-center my-10">
+    <% if user_signed_in? %>
+      <%= link_to edit_post_path(@post), class: "text-orange me-6" do %>
+        <i class="fa-regular fa-pen-to-square"></i> Editer le post
+      <% end %>
+      <%= link_to post_path(@post), class: "text-orange me-4 text-red me-6", data: { turbo_method: :delete,turbo_confirm: "Are you sure?" } do %>
+        <i class="fa-regular fa-trash-can"></i>Supprimer le post
+      <% end %>
+    <% end %>
+  </div>
   <%= raw @post.content %>
 </div>

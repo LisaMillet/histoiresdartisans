@@ -7,5 +7,8 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import TextController from "./text_controller"
-application.register("text", TextController)
+// import TextController from "./text_controller"
+// application.register("text", TextController)
+
+import TinymceController from "./tinymce_controller"
+application.register("tinymce", TinymceController)
