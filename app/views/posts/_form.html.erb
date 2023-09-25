@@ -3,7 +3,7 @@
   <div class="form-inputs">
     <%= f.input :title, label:"Titre" %>
     <%= f.input :author, label:"Auteur(e)" %>
-    <%= f.input :content, as: :text, class: "tinymce", input_html: { data: { tinymce_target: 'input' } } %>
+    <%= f.input :content, as: :text, class: "tinymce" %>
     <%= f.input :photo, as: :file %>
   </div>
   <%= f.submit "Publier cet article", class:"py-3 text-4xl lg:text-xl font-bold font-sans text-green hover:text-orange
