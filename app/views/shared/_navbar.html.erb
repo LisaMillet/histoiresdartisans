@@ -104,7 +104,7 @@
           <% if user_signed_in? %>
             <p>Bonjour <%= current_user.email %> | <%= link_to "Deconnexion", destroy_user_session_path, data: {turbo_method: :delete} %></p>
         <% else %>
-            <%= link_to "Login", new_user_session_path %>
+          <%= link_to "Login", new_user_session_path %>
         <% end %>
         </li>
       </ul>

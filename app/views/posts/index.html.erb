@@ -1,4 +1,4 @@
-<div class="container mx-auto mt-8" >
+<div class="lg:px-28 px-2 mx-auto my-3" >
   <p style="color: green"><%= notice %></p>
 
   <h1 class="text-center">Tous nos articles</h1>
@@ -8,7 +8,7 @@
     <%= link_to "+ Nouvel Article", new_post_path, class:"rounded-sm bg-orange hover:bg-green hover:text-beige text-beige font-bold text-3xl lg:text-base font-sans text-center mb-1 py-2 px-4" %>
   <% end %>
   <%# <%  %>
-  
+
   <div id="posts-index" class="mt-5 grid grid-cols-2 gap-5">
     <% @posts.each do |post| %>
       <%= render post %>
