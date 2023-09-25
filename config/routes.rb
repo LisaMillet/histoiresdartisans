@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # allow to personalize the routes for connection & registration
+  # access at http://localhost:3000/users/#{replace by the value of the key sign in}
+  devise_for :users, path_names: {
+    sign_in: 'admin'
+  }, controllers: { registrations: 'users/registrations' }
   root to: "pages#home"
   resources :contacts, only: %i[new create]
   get 'contacts/sent', to: 'contacts#sent', as: 'sent_contact'
