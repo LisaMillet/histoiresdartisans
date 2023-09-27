@@ -103,6 +103,38 @@
         <li>
           <%= link_to "Nous contacter", new_contact_path, class:"text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
         </li>
+        <% if user_signed_in? %>
+          <li>
+            <button id="dropdownNavbarLink"
+              data-dropdown-toggle="targetEl3"
+              class="text-4xl lg:text-base font-bold font-monospace text-orange items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2">
+              <%= current_user.email %>
+              <svg
+                class="w-5 h-5 ml-1"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd">
+                  </path>
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div id="targetEl3" class="z-50 hidden font-monospace bg-beige divide-y divide-green shadow">
+                  <ul class="py-2 px-4 text-sm text-green" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <%= link_to 'Profil', podcast_path, class:"text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
+                    </li>
+                    <li>
+                      <%= link_to "Deconnexion", destroy_user_session_path, data: {turbo_method: :delete}, class:"text-4xl lg:text-base font-bold font-monospace text-orange items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
+                    </li>
+                  </ul>
+              </div>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
