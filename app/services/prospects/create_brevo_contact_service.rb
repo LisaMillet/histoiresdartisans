@@ -11,8 +11,7 @@ class CreateBrevoContactService
     create_contact = SibApiV3Sdk::CreateContact.new(attributes_contact)
 
     begin
-      result = api_instance.create_contact(create_contact)
-      # p result
+      api_instance.create_contact(create_contact)
     rescue SibApiV3Sdk::ApiError => e
       puts "Exception when calling ContactsApi->create_contact: #{e}"
     end
@@ -22,7 +21,6 @@ class CreateBrevoContactService
 
   def set_api_brevo
     SibApiV3Sdk.configure do |config|
-      # Configure API key authorization: api-key
       config.api_key['api-key'] = ENV.fetch('BREVO_API_KEY')
     end
   end

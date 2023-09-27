@@ -20,6 +20,10 @@ class Prospect < ApplicationRecord
   before_create :clean_infos
   after_create_commit :create_contact_brevo
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
   private
 
   def clean_infos
