@@ -100,13 +100,6 @@
         <li>
           <%= link_to "Nous contacter", new_contact_path, class:"text-4xl lg:text-base font-bold font-monospace text-green items-center flex justify-end w-full hover:bg-beige hover:text-orange px-4 py-2"%>
         </li>
-        <li>
-          <% if user_signed_in? %>
-            <p>Bonjour <%= current_user.email %> | <%= link_to "Deconnexion", destroy_user_session_path, data: {turbo_method: :delete} %></p>
-        <%# <% else %>
-            <%# <%= link_to "Login", new_user_session_path %>
-        <% end %>
-        </li>
       </ul>
     </div>
   </div>
