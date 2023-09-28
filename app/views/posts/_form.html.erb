@@ -2,11 +2,19 @@
 <%= simple_form_for @post do |f| %>
 
   <div class="form-inputs">
-    <%= f.input :title, label:"Titre" %>
-    <%= f.input :author, label:"Auteur(e)" %>
+    <%= f.input :title, label:"Titre", input_html: {class:"mb-3 mx-2 rounded-xl"} %>
+    <%= f.input :author, label:"Auteur(e)", input_html: {class:"mb-3 mx-2 rounded-xl"} %>
+    <%= f.input :photo, as: :file, label:"Photo de couverture", input_html: {class:"mx-2 text-sm text-gray-900 rounded-e-xl cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"}, label_html: {class:""} %>
     <%= f.input :content, as: :text, class: "tinymce" %>
-    <%= f.input :photo, as: :file %>
   </div>
-  <%= f.submit "Publier cet article", class:"py-3 text-4xl lg:text-xl font-bold font-sans text-green hover:text-orange" %>
+  <%= f.submit "Publier cet article", class:"py-3 text-4xl lg:text-xl font-bold font-sans text-green hover:text-orange", data: { turbo_confirm: "Vous-êtes sur le point de publier un article. Souhaitez-vous continuer?" } %>
 
 <% end %>
+
+<script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+      toolbar: 'undo redo | blocks fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+    });
+</script>
