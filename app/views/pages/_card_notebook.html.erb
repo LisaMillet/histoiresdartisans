@@ -1,15 +1,15 @@
 <%# CARD %>
-  <div class="sm:w-[80%] md:w-[80%] lg:w-[60%] flex flex-col items-center bg-beige rounded-sm shadow overflow-hidden">
+  <div class="w-[90%] md:w-[80%] lg:w-[70%] flex flex-col items-center bg-beige rounded-sm shadow overflow-hidden">
     <%# Image + Content %>
-    <div class='h-50 flex'>
-      <%= cl_image_tag notebook[:image], alt: "ImageCarnet", class: 'h-full w-[300px]' %>
+    <div class='h-50 lg:h-60 lg:flex'>
+      <%= cl_image_tag notebook[:image], alt: "ImageCarnet", class: 'lg:h-full lg:w-[300px] w-full h-[200px] object-cover' %>
       <%# Content %>
-      <div class='ms-4 grid'>
-        <h4 class='text-2xl text-green'><%= notebook[:title] %></h4>
-        <p class="text-xs m-0">
+      <div class='lg:ms-4 grid mx-3 lg:mx-0'>
+        <h4 class='text-2xl text-green flex items-center py-2 lg:py-0'><%= notebook[:title] %></h4>
+        <p class="text-xs m-0 mb-4 lg:mb-0">
           <%= notebook[:summary] %>
         </p>
-        <div class='w-[165px] h-[40px]'>
+        <div class='w-[165px] h-[40px] mb-3 lg:mb-0'>
           <%= link_to 'Recevoir', '#', class: 'block rounded-sm bg-orange hover:bg-green hover:text-beige text-beige font-bold lg:text-base font-sans text-center py-2 px-4 w-[165px] h-[40px]',
                                               data: { form_prospect_target: 'downloadButton', id: notebook[:template_mail_id],
                                                       action: 'click->form-prospect#toggleForm' } %>
@@ -20,7 +20,7 @@
     <%# Form of prospects %>
     <div class='w-full h-50 flex flex-col justify-center items-center py-4 hidden'
           data-form-prospect-target='divForm' data-id='<%= notebook[:template_mail_id] %>'>
-      <%= simple_form_for prospect, html: { class: 'simple_form new_prospect flex flex-col justify-center items-center w-[60%]  gap-[2em]',
+      <%= simple_form_for prospect, html: { class: 'simple_form new_prospect flex flex-col justify-center items-center gap-[2em] lg:w-[60%] w-[90%] lg:mt-5',
                                             data: { form_prospect_target: 'form', id: notebook[:template_mail_id],
                                                     action: 'turbo:submit-end->form-prospect#fillInputsAfterSubmit' } } do |f| %>
 

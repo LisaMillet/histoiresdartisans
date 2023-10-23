@@ -2,19 +2,26 @@
 <div class="w-full bg-cover bg-center h-128" style="background-image: url(<%= cl_image_path 'https://res.cloudinary.com/dvuyabyaw/image/upload/v1696257133/HdA/LisaMillet-HistoiresDartisans-_TipiiAtelier_11_retouche_djmgub.jpg' %>);">
     <div class="flex items-center justify-center h-full w-full bg-beige bg-opacity-50">
         <div class="text-center">
-            <h1 class="text-green text-6xl font-monospace lg:text-3xl font-bold uppercase">Carnets des innovations</h1>
+            <h1 class="text-green text-4xl font-monospace lg:text-5xl font-bold uppercase">Carnets des innovations</h1>
         </div>
     </div>
 </div>
 
+<div class="w-full flex justify-center">
+  <p class="md:w-[80%] lg:w-[80%] mt-[20px] text-base w-[90%] mb-[20px]">
+    Histoires d'Artisans célèbre l'ingénierie de l'artisanat d'art en mettant en lumière l'innovation et la recherche au sein des ateliers. Ces Carnets des Innovations présentent cinq artisans exceptionnels qui ont repoussé les limites de leur matière, expérimenté de nouvelles techniques et étendre les frontières de leur domaine. Chaque portrait explore l'origine de leurs idées, les opportunités qu'offre leur innovation, leur parcours de création, les défis surmontés, et les contraintes rencontrées. Ces artisans ont investi du temps pour dévoiler des solutions novatrices. Ces Carnets des Innovations souhaitent inspirer les esprits curieux, les passionnés de l'innovation, et les amateurs d'artisanat d'art.
+  </p>
+</div>
+
 <%# CARDS CONTAINER%>
-<div class="w-full mt-8 flex flex-col justify-center items-center gap-[2em]"
+<div class="w-full mt-8 flex flex-col justify-center items-center gap-[2em] mb-[40px]"
       data-controller="form-prospect">
+  <h4 class="font-bold text-green mb-8 text-3xl">Nos Carnet</h4>
   <%= render 'card_notebook', prospect: @prospect,
                                 notebook: {
                                   template_mail_id: 21,
                                   image: 'https://res.cloudinary.com/dvuyabyaw/image/upload/v1696256449/HdA/Nosqua_Recherche_Verre2Horizontal_g20tku.jpg',
                                   title: 'Le Verre',
-                                  summary: 'Ipsum eu nostrud nisi do consequat consequat deserunt incididunt duis ipsum aute incididunt. Non ut mollit do exercitation labore eiusmod magna deserunt ea veniam esse velit.'
+                                  summary: "Matériau intemporel, l'art du verre s'épanouit dans une fusion de tradition et de créativité. Découvrez l'histoire de ces artisans du verre qui repoussent les limites de l'innovation. Aurore Bouter, Atelier George, Aurélia Leblanc & Lucile Viaud, Nosqua, et Atelier Thomas Masson vous invitent à plonger dans leur monde fascinant. Laissez-vous surprendre par leurs créations uniques, leur passion pour l'art verrier et la préservation de l'héritage artisanal."
                                 } %>
 </div>
