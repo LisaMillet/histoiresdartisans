@@ -1,4 +1,4 @@
-class SendEmailWhiteBookService
+class SendEmailNotebooksService
   def initialize(prospect, infos = nil)
     @prospect = prospect
     @template = infos[:template].to_i
@@ -14,7 +14,7 @@ class SendEmailWhiteBookService
 
     begin
       result = api_instance.send_transac_email(send_smtp_email)
-      p result
+      # p result
     rescue SibApiV3Sdk::ApiError => e
       puts "Exception when calling TransactionalEmailsApi->send_transac_email: #{e}"
     end
@@ -36,8 +36,6 @@ class SendEmailWhiteBookService
       }],
       templateId: @template,
       params: {
-        PRENOM: @prospect.first_name,
-        NOM_LIVRE: @title,
         EMAIL: @prospect.email
       },
       headers: {

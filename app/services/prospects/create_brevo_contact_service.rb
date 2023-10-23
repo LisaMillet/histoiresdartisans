@@ -27,13 +27,13 @@ class CreateBrevoContactService
 
   def attributes_contact
     {
-      listIds: [2],
+      listIds: [20],
       email: @prospect.email,
       emailBlacklisted: !@prospect.newsletter,
       attributes: {
         PRENOM: @prospect.first_name,
         NOM: @prospect.last_name,
-        FONCTION: @prospect.position,
+        METIER: @prospect.position_id,
         ENTREPRISE: @prospect.company,
         NEWSLETTER: @prospect.newsletter
       }

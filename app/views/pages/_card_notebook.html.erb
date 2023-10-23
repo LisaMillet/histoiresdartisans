@@ -1,0 +1,97 @@
+<%# CARD %>
+  <div class="sm:w-[80%] md:w-[80%] lg:w-[60%] flex flex-col items-center bg-beige rounded-sm shadow overflow-hidden">
+    <%# Image + Content %>
+    <div class='h-50 flex'>
+      <%= cl_image_tag notebook[:image], alt: "ImageCarnet", class: 'h-full w-[300px]' %>
+      <%# Content %>
+      <div class='ms-4 grid'>
+        <h4 class='text-2xl text-green'><%= notebook[:title] %></h4>
+        <p class="text-xs m-0">
+          <%= notebook[:summary] %>
+        </p>
+        <div class='w-[165px] h-[40px]'>
+          <%= link_to 'Recevoir', '#', class: 'block rounded-sm bg-orange hover:bg-green hover:text-beige text-beige font-bold lg:text-base font-sans text-center py-2 px-4 w-[165px] h-[40px]',
+                                              data: { form_prospect_target: 'downloadButton', id: notebook[:template_mail_id],
+                                                      action: 'click->form-prospect#toggleForm' } %>
+        </div>
+      </div>
+    </div>
+
+    <%# Form of prospects %>
+    <div class='w-full h-50 flex flex-col justify-center items-center py-4 hidden'
+          data-form-prospect-target='divForm' data-id='<%= notebook[:template_mail_id] %>'>
+      <%= simple_form_for prospect, html: { class: 'simple_form new_prospect flex flex-col justify-center items-center w-[60%]  gap-[2em]',
+                                            data: { form_prospect_target: 'form', id: notebook[:template_mail_id],
+                                                    action: 'turbo:submit-end->form-prospect#fillInputsAfterSubmit' } } do |f| %>
+
+        <%# Hidden inputs to get the title and template id to send to Brevo API after %>
+        <%= f.input :template, as: :hidden, input_html: { value: notebook[:template_mail_id] } %>
+        <%= f.input :title, as: :hidden, input_html: { value: notebook[:title] } %>
+
+        <%# Email input %>
+        <div class='w-full mb-3 relative'>
+          <%= f.input :email, placeholder: 'Email*',
+                              wrapper_html: { class: 'w-full mb-0' },
+                              label: false,
+                              input_html: { class: 'w-full bg-beige focus:outline-none border-b border-b-green-900',
+                                            data: { form_prospect_target: 'input',
+                                                    id: notebook[:template_mail_id],
+                                                    action: 'input->form-prospect#verifyEmail input->form-prospect#enableButton' } } %>
+          <span class='absolute right-0 top-0 text-green hidden'
+                data-form-prospect-target='validMark' data-id='<%= notebook[:template_mail_id] %>'>
+            <i class="fa-solid fa-check"></i>
+          </span>
+          <span class='absolute right-0 top-0 text-red hidden'
+                data-form-prospect-target='invalidMark' data-id='<%= notebook[:template_mail_id] %>'>
+            <i class="fa-solid fa-xmark"></i>
+          </span>
+        </div>
+
+        <%# First name & last name inputs %>
+        <div class="w-full flex justify-between">
+          <%= f.input :first_name, label: false, placeholder: 'Prénom*',
+                                    input_html: { class: ' w-full bg-beige focus:outline-none border-b border-b-green-900',
+                                                  data: { form_prospect_target: 'input', id: notebook[:template_mail_id],
+                                                          action: 'input->form-prospect#enableButton' }},
+                                    wrapper_html: { class: 'w-[48%]' } %>
+          <%= f.input :last_name, label: false, placeholder: 'Nom*',
+                                  input_html: { class: ' w-full bg-beige focus:outline-none border-b border-b-green-900',
+                                                data: { form_prospect_target: 'input', id: notebook[:template_mail_id],
+                                                        action: 'input->form-prospect#enableButton' }},
+                                  wrapper_html: { class: 'w-[48%]' } %>
+        </div>
+
+        <%# Position and company inputs %>
+        <div class="w-full flex justify-between">
+          <%= f.input :position, label: false, as: :select, collection: Prospect.positions,
+                                  input_html: { class: ' w-full bg-beige focus:outline-none border-b border-b-green-900 h-full',
+                                                data: {
+                                                  form_prospect_target: 'input',
+                                                  id: notebook[:template_mail_id]
+                                                } },
+                                  wrapper_html: { class: 'w-[48%]' },
+                                  include_blank: false %>
+          <%= f.input :company, label: false, placeholder: 'Entreprise*',
+                                input_html: { class: 'w-full bg-beige focus:outline-none border-b border-b-green-900',
+                                              data: { form_prospect_target: 'input', id: notebook[:template_mail_id],
+                                                      action: 'input->form-prospect#enableButton' }},
+                                wrapper_html: { class: 'w-[48%]' } %>
+        </div>
+
+        <%# Agreement to sign up to the newsletter %>
+        <div class="mb-3 w-full">
+          <%= f.check_box :newsletter, class: '', id: 'prospect_newsletter', data: { form_prospect_target: 'input', id: notebook[:template_mail_id] } %>
+          <%= f.label :newsletter, 'Cochez cette case si vous souhaitez être inscrit à notre newsletter', class: 'text-sm pl-1' %>
+        </div>
+
+        <%# Button to download => Removed, email from brevo with template directly %>
+        <%#= link_to '', 'download/test.jpg', download: 'test.jpg', class: 'hidden',
+                                              data: { id: notebook[:template_mail_id], form_prospect_target: 'buttonDL' } %>
+
+        <%= f.submit 'Recevoir', class: 'block rounded-sm bg-orange disabled:bg-orange disabled:opacity-80 disabled:cursor-auto hover:bg-green hover:text-beige text-beige font-bold lg:text-base font-sans text-center py-2 px-4 cursor-pointer',
+                                    data: { form_prospect_target: 'buttonForm', id: notebook[:template_mail_id] },
+                                    disabled: true %>
+      <% end %>
+    </div>
+  </div>
+<%# END OF CARD %>

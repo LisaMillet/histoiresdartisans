@@ -1,19 +1,21 @@
 class ProspectsController < ApplicationController
   def create
     @prospect = Prospect.new(prospect_params)
+    @prospect.position = params[:prospect][:position].to_i
 
     if @prospect.save
-      send_email_white_book
-      flash.now[:notice] = 'Le livre vous a été envoyé par email'
+      send_email_notebooks
+      flash[:notice] = 'Le carnet vous a été envoyé par email'
+      head :ok
     else
-      render 'pages/white_book', status: :unprocessable_entity
+      render 'pages/notebooks', status: :unprocessable_entity
     end
   end
 
   private
 
   def prospect_params
-    all_params.slice(:first_name, :last_name, :email, :position, :company, :newsletter)
+    all_params.slice(:first_name, :last_name, :email, :company, :newsletter)
   end
 
   def all_params
@@ -21,7 +23,7 @@ class ProspectsController < ApplicationController
           .permit(:first_name, :last_name, :email, :position, :company, :newsletter, :template, :title)
   end
 
-  def send_email_white_book
-    SendEmailWhiteBookService.new(@prospect, params[:prospect].slice(:title, :template)).call
+  def send_email_notebooks
+    SendEmailNotebooksService.new(@prospect, params[:prospect].slice(:title, :template)).call
   end
 end
