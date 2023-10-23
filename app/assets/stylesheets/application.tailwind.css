@@ -9,9 +9,12 @@
     @apply text-green text-6xl font-monospace lg:text-3xl font-bold uppercase;
   }
   h2 {
-    @apply text-6xl lg:text-xl font-bold font-monospace text-green;
+    @apply text-6xl lg:text-xl font-bold font-monospace;
   }
   p {
-    @apply text-green text-4xl lg:text-xl font-sans my-2 text-green;
+    @apply text-green text-4xl lg:text-xl font-sans;
+  }
+  a {
+    @apply text-green text-4xl lg:text-xl font-sans;
   }
 }
