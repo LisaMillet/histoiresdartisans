@@ -29,7 +29,7 @@ class PagesController < ApplicationController
   def visite
   end
 
-  def white_books
+  def notebooks
     @prospect = Prospect.new
   end
 end

@@ -1,24 +1,36 @@
 # require 'sib-api-v3-sdk'
 
 class Prospect < ApplicationRecord
-  POSITIONS = [
-    'Particulier',
-    'Presse',
-    'Architecte',
-    'Artiste',
-    'Autre',
-    'Décorateur',
-    'Designer',
-    'Distributeur',
-    'Salon',
-    'Fournisseur',
-    'Galerie'
-  ]
+  enum position: {
+    Artisan: 1,
+    Entreprise: 2,
+    Particulier: 3,
+    Presse: 4,
+    Architecte: 5,
+    'Art Advisor': 6,
+    Artiste: 7,
+    Autre: 8,
+    Collectionneur: 9,
+    Curateur: 10,
+    Décorateur: 11,
+    Designer: 12,
+    Distributeur: 13,
+    Salon: 14,
+    Fournisseur: 15,
+    Galerie: 16
+  }
 
   validates :first_name, :last_name, :email, :position, :company, presence: true
-  validates :position, inclusion: { in: POSITIONS }
   before_create :clean_infos
   after_create_commit :create_contact_brevo
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
+  def position_id
+    self.class.positions[position] if position.present?
+  end
 
   private
 

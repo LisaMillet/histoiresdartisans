@@ -21,8 +21,9 @@ Rails.application.routes.draw do
   get 'partenariat/civ', to: 'partnership#civ', as: 'civ'
   get 'partenariat/loem', to: 'partnership#loem', as: 'loem'
 
-  # Livres blancs w/ prospects
-  get 'livres_blancs', to: 'pages#white_books', as: 'white_books'
+  # Carnets des innovations w/ prospects
+  get 'carnets_des_innovations', to: 'pages#notebooks', as: 'notebooks'
+
   resources :prospects, only: :create
 
   # Articles
