@@ -28,4 +28,8 @@ class PagesController < ApplicationController
 
   def visite
   end
+
+  def notebooks
+    @prospect = Prospect.new
+  end
 end
