@@ -75,8 +75,8 @@ export default class extends Controller {
     const btnDL         = this.buttonDLTargets.find(button => button.dataset.id === this.activeFormID)
     const btnSubmit     = this.buttonFormTargets.find(button => button.dataset.id === this.activeFormID)
 
-    btnSubmit.disabled  = true
+    // btnSubmit.disabled  = true
     btnDL.click()
-    event.target.reset()
+    // event.target.reset()
   }
 }
