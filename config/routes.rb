@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   # Carnets des innovations w/ prospects
   get 'carnets_des_innovations', to: 'pages#notebooks', as: 'notebooks'
+
   resources :prospects, only: :create
 
   # Articles

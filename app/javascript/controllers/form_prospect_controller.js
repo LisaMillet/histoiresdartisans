@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="form-prospect"
 export default class extends Controller {
 
-  static targets      = [
+  static targets      = 
     'divForm',
     'downloadButton',
     'form',
@@ -19,7 +19,6 @@ export default class extends Controller {
   ]
   emailRegexp         = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
   validEmail          = false
-
 
   connect() {
     console.log('Form Prospect Connected')
