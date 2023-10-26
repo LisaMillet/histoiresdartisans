@@ -4,7 +4,7 @@ class ProspectsController < ApplicationController
     @prospect.position = params[:prospect][:position].to_i
 
     if @prospect.save
-      # send_email_notebooks
+      send_email_notebooks
       flash.now[:notice] = 'Le carnet vous a été envoyé par email'
       render turbo_stream: turbo_stream.append(
         :flash,
