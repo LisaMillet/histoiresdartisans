@@ -5,7 +5,7 @@ class ProspectsController < ApplicationController
 
     if @prospect.save
       send_email_notebooks
-      flash[:notice] = 'Le carnet vous a été envoyé par email'
+      flash.now[:notice] = 'Le carnet vous a été envoyé par email'
       head :ok
     else
       render 'pages/notebooks', status: :unprocessable_entity
