@@ -31,6 +31,17 @@ module.exports = {
       '128': '32rem',
       '320': '40rem',
     },
+    // Create the class => animate-fade
+    animation: {
+      fade: 'fade 4s both',
+    },
+    // Keyframe used in the animate-fade
+    keyframes: {
+      fade: {
+        '0%, 100%': { opacity: 0 },
+        '5%, 60%': { opacity: 1 },
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
