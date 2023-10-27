@@ -6,12 +6,15 @@
 
 @layer base {
   h1 {
-    @apply font-monospace text-green;
+    @apply text-green text-6xl font-monospace lg:text-3xl font-bold uppercase;
   }
   h2 {
-    @apply font-monospace text-green;
+    @apply text-6xl lg:text-xl font-bold font-monospace;
   }
   p {
-    @apply font-sans text-green;
+    @apply text-green text-4xl lg:text-xl font-sans;
+  }
+  a {
+    @apply text-green text-4xl lg:text-xl font-sans;
   }
 }

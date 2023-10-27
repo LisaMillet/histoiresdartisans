@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     sign_in: 'admin'
   }, controllers: { registrations: 'users/registrations' }
   root to: "pages#home"
+  
   resources :contacts, only: %i[new create]
   get 'contacts/sent', to: 'contacts#sent', as: 'sent_contact'
   get '/qui_sommes_nous', to: 'pages#about', as: 'about'
@@ -20,6 +21,11 @@ Rails.application.routes.draw do
   get '/partenariat', to: 'pages#partnership', as: 'partnership'
   get 'partenariat/civ', to: 'partnership#civ', as: 'civ'
   get 'partenariat/loem', to: 'partnership#loem', as: 'loem'
+
+  # Carnets des innovations w/ prospects
+  get 'carnets_des_innovations', to: 'pages#notebooks', as: 'notebooks'
+
+  resources :prospects, only: :create
 
   # Articles
   resources :articles, only: %i[index]

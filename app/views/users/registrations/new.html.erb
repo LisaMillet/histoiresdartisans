@@ -1,24 +1,30 @@
-<h2>Sign up</h2>
+<div class="lg:px-28 px-2 mx-auto my-10">
+  <h2>Enregistrer un nouvel utilisateur</h2>
 
-<%= simple_form_for(@resource, as: :user, url: registration_path(:user)) do |f| %>
-  <%= f.error_notification %>
+  <%= simple_form_for(@resource, as: :user, url: registration_path(:user)) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :admin %>
-  </div>
+    <div class="form-inputs my-5">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }%>
+      <%= f.input :password,
+                  label: "Mot de passe",
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  label: "Mot de passe",
+                  required: true,
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :admin, as: :radio_buttons,
+                  label: "Voulez-vous créer un membre avec le statut d'administrateur? ",
+                  input_html: { class: 'mx-2 fs-10' }%>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit, "Créer un compte", class:"block rounded-sm bg-orange hover:bg-green hover:text-beige text-beige font-bold text-3xl lg:text-base font-sans text-center py-2 px-4" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,28 @@
+<%# BANNER %>
+<div class="w-full bg-cover bg-center h-128" style="background-image: url(<%= image_path 'https://res.cloudinary.com/dvuyabyaw/image/upload/v1696257133/HdA/LisaMillet-HistoiresDartisans-_TipiiAtelier_11_retouche_djmgub.jpg' %>);">
+    <div class="flex items-center justify-center h-full w-full bg-beige bg-opacity-50">
+        <div class="text-center">
+            <h1 class="text-green text-4xl font-monospace lg:text-5xl font-bold uppercase">Nos Carnets des innovations</h1>
+        </div>
+    </div>
+</div>
+
+<div class='lg:px-28 px-2 mx-auto my-3'>
+  <p class="text-3xl lg:text-base font-sans mt-3">
+    Histoires d'Artisans célèbre l'ingénierie de l'artisanat d'art en mettant en lumière l'innovation et la recherche au sein des ateliers. Ces Carnets des Innovations présentent cinq artisans exceptionnels qui ont repoussé les limites de leur matière, expérimenté de nouvelles techniques et étendre les frontières de leur domaine. Chaque portrait explore l'origine de leurs idées, les opportunités qu'offre leur innovation, leur parcours de création, les défis surmontés, et les contraintes rencontrées. Ces artisans ont investi du temps pour dévoiler des solutions novatrices. Ces Carnets des Innovations souhaitent inspirer les esprits curieux, les passionnés de l'innovation, et les amateurs d'artisanat d'art.
+  </p>
+
+  <h2 class="text-6xl lg:text-xl font-bold font-monospace text-green my-4">Inspirez-vous !</h2>
+
+<%# CARDS CONTAINER%>
+  <div class="w-full mt-8 flex flex-col justify-center items-center gap-[2em] mb-[40px]"
+        data-controller="form-prospect">
+    <%= render 'card_notebook', prospect: @prospect,
+                                  notebook: {
+                                    template_mail_id: 21,
+                                    image: 'https://res.cloudinary.com/dvuyabyaw/image/upload/v1696256449/HdA/Nosqua_Recherche_Verre2Horizontal_g20tku.jpg',
+                                    title: 'Le Verre',
+                                    summary: "Matériau intemporel, l'art du verre s'épanouit dans une fusion de tradition et de créativité. Découvrez l'histoire de ces artisans du verre qui repoussent les limites de l'innovation. Aurore Bouter, Atelier George, Aurélia Leblanc & Lucile Viaud, Nosqua, et Atelier Thomas Masson vous invitent à plonger dans leur monde fascinant. Laissez-vous surprendre par leurs créations uniques, leur passion pour l'art verrier et la préservation de l'héritage artisanal."
+                                  } %>
+  </div>
+</div>

@@ -1,5 +1,9 @@
+<%= render "breadcrumb", first_element: "Tous les articles", first_element_path: posts_path, second_element: "Nouvel article"%>
+
 <div class="container mx-auto mt-8" >
   <h1 class="mb-8">Nouvel article</h1>
+
+  <%# <h4 class="italic mb-2">* Actualisez la page si l'éditeur de texte ne s'est pas lancé</h4> %>
 
   <div class="new-article-form mb-8">
     <%= render "form", post: @post %>
@@ -8,4 +12,3 @@
     <%= link_to "Retourner aux articles", posts_path %>
   </div>
 </div>
-

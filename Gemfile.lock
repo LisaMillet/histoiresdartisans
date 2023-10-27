@@ -115,6 +115,8 @@ GEM
       dotenv (= 2.8.1)
       railties (>= 3.2)
     erubi (1.12.0)
+    ethon (0.16.0)
+      ffi (>= 1.15.0)
     execjs (2.8.1)
     ffi (1.15.5)
     font-awesome-sass (6.3.0)
@@ -136,6 +138,7 @@ GEM
       activesupport (>= 5.0.0)
     jsbundling-rails (1.1.1)
       railties (>= 6.0.0)
+    json (2.6.3)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -232,6 +235,10 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sib-api-v3-sdk (9.1.0)
+      addressable (~> 2.3, >= 2.3.0)
+      json (~> 2.1, >= 2.1.0)
+      typhoeus (~> 1.0, >= 1.0.1)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -252,6 +259,8 @@ GEM
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
+    typhoeus (1.4.0)
+      ethon (>= 0.9.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
@@ -299,6 +308,7 @@ DEPENDENCIES
   rails (~> 7.0.4, >= 7.0.4.2)
   sassc-rails
   selenium-webdriver
+  sib-api-v3-sdk
   simple_form!
   sprockets-rails
   stimulus-rails

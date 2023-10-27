@@ -4,11 +4,14 @@
 
 import { application } from "./application"
 
+import FlashRemovalController from "./flash_removal_controller"
+application.register("flash-removal", FlashRemovalController)
+
+import FormProspectController from "./form_prospect_controller"
+application.register("form-prospect", FormProspectController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
-
-// import TextController from "./text_controller"
-// application.register("text", TextController)
 
 import TinymceController from "./tinymce_controller"
 application.register("tinymce", TinymceController)
