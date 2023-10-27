@@ -22,7 +22,7 @@ class Prospect < ApplicationRecord
 
   validates :first_name, :last_name, :email, :position, :company, presence: true
   before_create :clean_infos
-  # after_create_commit :create_contact_brevo
+  after_create_commit :create_contact_brevo
 
   def full_name
     "#{first_name} #{last_name}"
