@@ -17,39 +17,39 @@
 
     <%# Notre mission %>
     <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center ">
-      <a href="https://www.loutilenmain.fr/blog-actus?modal_page=custom-page-detail&modal_detail_id=102545-l-association-l-outil-en-main-pantin-celebre-le-patrimoine-et-la-transmission-artisanale-lors-de-l-evenement-patrimoine-en-transmission/">
+      <a target="_blank" href="<%= about_path %>">
         <img class="h-[250px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1679515707/HdA/Fond%20Beige%20et%20Orange/Beige_Orange_5_yxkj5z.jpg" alt="La mission de Histoires d'Artisans" />
       </a>
       <div class="p-3">
-        <a href="<%= about_path %>">
+        <a target="_blank" href="<%= about_path %>">
           <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Notre mission</h3>
           <p class="text-3xl lg:text-base font-sans mb-3 text-green">Découvrez nos actions pour valoriser le savoir-faire intellectuel de l'artisan d'art, expert en matériaux</p>
         </a>
       </div>
     </div>
 
-    <%# Notre répertoire %>
+    <%# Nous soutenir %>
     <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center ">
-      <a href="<%= directory_artisans_path %>">
+      <a target="_blank" href="<%= support_path %>">
         <img class="h-[250px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1679515705/HdA/Fond%20Beige%20et%20Orange/Beige_Orange_8_gdpunx.jpg" alt="Répertoire des artisans Histoires d'Artisans" />
       </a>
       <div class="p-3">
-        <a href="<%= directory_artisans_path %>">
-          <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Notre répertoire</h3>
-          <p class="te xt-3xl lg:text-base font-sans mb-3 text-green">Soyez accompagné dans vos projets de création par des artisans experts en matériaux</p>
+        <a target="_blank" href="<%= support_path %>">
+          <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Nous soutenir</h3>
+          <p class="te xt-3xl lg:text-base font-sans mb-3 text-green">Soutenez nos actions grâce au don
         </a>
       </div>
     </div>
 
-    <%# Nos visites %>
+    <%# Notre blog %>
     <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center ">
-      <a href="<%= visite_path %>">
-        <img class="h-[250px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1679515700/HdA/Fond%20Beige%20et%20Orange/Beige_Orange_19_uaab9m.jpg" alt="Visites d'atelier d'artisans d'art avec Histoires d'Artisans" />
+      <a target="_blank" href="<%= posts_path %>">
+        <img class="h-[250px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1679515707/HdA/Fond%20Beige%20et%20Orange/Beige_Orange_5_yxkj5z.jpg" alt="La mission de Histoires d'Artisans" />
       </a>
       <div class="p-3">
-        <a href="<%= visite_path %>">
-          <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Nos visites</h3>
-          <p class="te xt-3xl lg:text-base font-sans mb-3 text-green">Faites entrer vos équipes ou vos clients dans l'atelier d'un artisan d'art</p>
+        <a target="_blank" href="<%= posts_path %>">
+          <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Nos articles</h3>
+          <p class="text-3xl lg:text-base font-sans mb-3 text-green">Entrez dans l'univers de l'artisanat d'art à travers notre blog.</p>
         </a>
       </div>
     </div>
@@ -61,39 +61,40 @@
 <div class='lg:px-28 px-2 mx-auto my-3'>
   <h2 class="text-6xl lg:text-xl font-bold font-monospace text-green my-6">Nos actualités</h2>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+    <%# Nos carnets des innovations %>
+    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
+      <a target="_blank" href="<%= notebooks_path %>">
+        <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1696257133/HdA/LisaMillet-HistoiresDartisans-_TipiiAtelier_11_retouche_djmgub.jpg" alt="Les carnets des innovations de Histoires d'Artisans" />
+      </a>
+      <div class="p-3">
+        <a target="_blank" href="<%= notebooks_path %>">
+          <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Nos carnets des innovations</h3>
+          <p class="text-3xl lg:text-base font-sans mb-3 text-green">Inspirez-vous grâce à nos portraits d'artisans qui ont repoussé les limites de leur matière</p>
+        </a>
+      </div>
+    </div>
+
     <%# L'OeM %>
     <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
-      <a href="https://www.loutilenmain.fr/blog-actus?modal_page=custom-page-detail&modal_detail_id=102545-l-association-l-outil-en-main-pantin-celebre-le-patrimoine-et-la-transmission-artisanale-lors-de-l-evenement-patrimoine-en-transmission/">
+      <a target="_blank" href="https://www.loutilenmain.fr/blog-actus?modal_page=custom-page-detail&modal_detail_id=102545-l-association-l-outil-en-main-pantin-celebre-le-patrimoine-et-la-transmission-artisanale-lors-de-l-evenement-patrimoine-en-transmission/">
         <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1693682722/HdA/Partenaires/L%27Outil%20en%20Main/LOeM_Bettencourt_Atelier_PIM33_m4zzaa.png" alt="L'Outil en Main France" />
       </a>
       <div class="p-3">
-        <a href="https://www.loutilenmain.fr/blog-actus?modal_page=custom-page-detail&modal_detail_id=102545-l-association-l-outil-en-main-pantin-celebre-le-patrimoine-et-la-transmission-artisanale-lors-de-l-evenement-patrimoine-en-transmission">
+        <a target="_blank" href="https://www.loutilenmain.fr/blog-actus?modal_page=custom-page-detail&modal_detail_id=102545-l-association-l-outil-en-main-pantin-celebre-le-patrimoine-et-la-transmission-artisanale-lors-de-l-evenement-patrimoine-en-transmission">
           <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">L'Outil en Main France</h3>
           <p class="text-3xl lg:text-base font-sans mb-3 text-green">Découvrez notre événement Patrimoine en transmission dans le cadre des Journées Européennes du Patrimoine.</p>
         </a>
       </div>
     </div>
 
-    <%# Nous soutenir %>
-    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
-      <a href="<%= support_path %>">
-        <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1679911238/HdA/AtelierDablanc_bx4ocu.jpg" alt="Faites un don à Histoires d'Artisans" />
-      </a>
-      <div class="p-3">
-        <a href="<%= support_path %>">
-          <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Nous soutenir</h3>
-          <p class="text-3xl lg:text-base font-sans mb-3 text-green">Soutenez nos actions en faisant un don</p>
-        </a>
-      </div>
-    </div>
-
     <%# CIV %>
     <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
-      <a href="<%= civ_path %>">
+      <a target="_blank" href="<%= civ_path %>">
         <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1683888052/HdA/Partenaires/CIV/Partenaire_CIV_1_vmkujy.jpg" alt="Centre International du Vitrail" />
       </a>
       <div class="p-3">
-        <a href="<%= civ_path %>">
+        <a target="_blank" href="<%= civ_path %>">
           <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Centre International du Vitrail</h3>
           <p class="te xt-3xl lg:text-base font-sans mb-3 text-green">Découvrez notre partenariat avec le Centre International du Vitrail</p>
         </a>
@@ -107,15 +108,29 @@
   <h2 class="text-6xl lg:text-xl font-bold font-monospace text-green my-6">Nos derniers épisodes de podcast</h2>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
-    <%# Marion Saussier %>
+    <%# Soumia Luquet %>
     <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
-      <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1694534725/HdA/Podcast/LisaMillet_HistoiresDartisans_MaisonAlivon_MarionSaussier_1_dulyoz.jpg" alt="Marion Saussier - Maison Alivon" />
+      <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1698404079/HdA/Podcast/LisaMillet_HistoiresDartisans_LaMaisonLuquet_SoumiaLuquet_67_wq0gui.jpg" alt="Soumia Luquet" />
       <div class="p-3">
-        <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Marion Saussier - Maison Alivon</h3>
-        <a href="https://smartlink.ausha.co/histoiresdartisans/29-ideesrecues-marion-saussier-fondeur-caractere-bronze">
+        <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Soumia Luquet</h3>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/35-idees-recues-taillandiers">
           <p class="text-3xl lg:text-base font-sans mb-3 text-green">Idées-reçues</p>
         </a>
-        <a href="https://smartlink.ausha.co/histoiresdartisans/30-marion-saussier-maison-alivon">
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/36-soumia-luquet-directrice-la-maison-luquet">
+          <p class="text-3xl lg:text-base font-sans mb-3 text-green">Interview</p>
+        </a>
+      </div>
+    </div>
+
+    <%# Samuel Latour %>
+    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
+      <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1694534735/HdA/Podcast/LisaMillet_HistoiresDartisans_SamuelLatour_bis_18_nt4wds.jpg" alt="Samuel Latour" />
+      <div class="p-3">
+        <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Samuel Latour</h3>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/33-idees-recues-artistes-artisans-tourneurs">
+          <p class="text-3xl lg:text-base font-sans mb-3 text-green">Idées-reçues</p>
+        </a>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/34-samuel-latour-artiste-sculpteur">
           <p class="text-3xl lg:text-base font-sans mb-3 text-green">Interview</p>
         </a>
       </div>
@@ -126,28 +141,28 @@
       <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1694534730/HdA/Podcast/LisaMillet_HistoiresDartisans_ValerieTanfin_20_fpukqu.jpg" alt="Valérie Tanfin" />
       <div class="p-3">
         <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Valérie Tanfin</h3>
-        <a href="https://smartlink.ausha.co/histoiresdartisans/31-idees-recues-plumasserie">
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/31-idees-recues-plumasserie">
           <p class="text-3xl lg:text-base font-sans mb-3 text-green">Idées-reçues</p>
         </a>
-        <a href="https://smartlink.ausha.co/histoiresdartisans/32-valerie-tanfin-plumassiere">
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/32-valerie-tanfin-plumassiere">
           <p class="text-3xl lg:text-base font-sans mb-3 text-green">Interview</p>
         </a>
       </div>
     </div>
 
-
-    <%# Samuel Latour %>
+    <%# Marion Saussier %>
     <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
-      <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1694534735/HdA/Podcast/LisaMillet_HistoiresDartisans_SamuelLatour_bis_18_nt4wds.jpg" alt="Samuel Latour" />
+      <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1694534725/HdA/Podcast/LisaMillet_HistoiresDartisans_MaisonAlivon_MarionSaussier_1_dulyoz.jpg" alt="Marion Saussier - Maison Alivon" />
       <div class="p-3">
-        <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Samuel Latour</h3>
-        <a href="https://smartlink.ausha.co/histoiresdartisans/33-idees-recues-artistes-artisans-tourneurs">
+        <h3 class="text-green mb-2 text-6xl lg:text-2xl font-bold font-monospace">Marion Saussier - Maison Alivon</h3>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/29-ideesrecues-marion-saussier-fondeur-caractere-bronze">
           <p class="text-3xl lg:text-base font-sans mb-3 text-green">Idées-reçues</p>
         </a>
-        <a href="">
-          <p class="text-3xl lg:text-base font-sans mb-3 text-green">Interview bientôt disponible</p>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/30-marion-saussier-maison-alivon">
+          <p class="text-3xl lg:text-base font-sans mb-3 text-green">Interview</p>
         </a>
       </div>
     </div>
+
 
 </div>
