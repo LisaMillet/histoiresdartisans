@@ -1,6 +1,10 @@
 <%# CARD %>
-<div class="w-[90%] lg:w-[70%] flex flex-col items-center bg-beige rounded-sm shadow">
+<div class="w-[90%] lg:w-[70%] flex flex-col items-center bg-beige rounded-sm shadow relative">
   <%# Image + Content %>
+
+  <%= turbo_frame_tag :flash_notebook, class: 'absolute right-[15px] flex flex-col items-end w-[max-content] gap-[10px] top-[500px] lg:top-[350px] lg:left-[5px]' do %>
+    <%= render "shared/flash_message" %>
+  <% end %>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 rounded-sm">
 
