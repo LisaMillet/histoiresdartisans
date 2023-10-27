@@ -4,12 +4,13 @@ class ProspectsController < ApplicationController
     @prospect.position = params[:prospect][:position].to_i
 
     if @prospect.save
-      send_email_notebooks
-      flash.now[:notice] = 'Le carnet vous a été envoyé par email'
-      render turbo_stream: turbo_stream.append(
-        :flash,
-        partial: 'shared/flash_message'
-      )
+      # send_email_notebooks
+      # flash.now[:notice] = 'Le carnet vous a été envoyé par email'
+      # render turbo_stream: turbo_stream.append(
+      #   :flash,
+      #   partial: 'shared/flash_message'
+      # )
+      head :ok
     else
       render 'pages/notebooks', status: :unprocessable_entity
     end
