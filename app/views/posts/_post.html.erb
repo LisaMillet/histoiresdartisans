@@ -3,11 +3,11 @@
       <%# picture of a post %>
         <% if post.photo.key.present? %>
           <div>
-            <%= cl_image_tag post.photo.key, height: 300, width: 700, crop: :fill, class:"rounded-lg" %>
+            <%= cl_image_tag post.photo.key, height: 300, width: 700, crop: :fill, class:"rounded-t-lg" %>
           </div>
         <% end %>
       <div class="p-5">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-green dark:text-white"><%= post.title.size > 30 ? post.title.first(30) << "..." : post.title %></h5>
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-green dark:text-white"><%= post.title.size > 50 ? post.title.first(50) << "..." : post.title %></h5>
         <h6 class="mb-2 text-gray-400 dark:text-white">Par <%= post.author %></h6>
         <%# <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= post.content %>
         <%# </p> %>

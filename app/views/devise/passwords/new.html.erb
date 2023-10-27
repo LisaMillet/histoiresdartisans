@@ -1,18 +1,22 @@
-<h2>Forgot your password?</h2>
+<div class="lg:px-28 px-2 mx-auto my-10">
+  <h2>Forgot your password?</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+  <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-  </div>
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit, "Send request", class:"block rounded-sm bg-orange hover:bg-green hover:text-beige text-beige font-bold text-3xl lg:text-base font-sans text-center py-2 px-4" %>
+    </div>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%- if controller_name != 'sessions' %>
+    <%= link_to "Log in", new_session_path(resource_name) %><br />
+  <% end %>
+</div>
