@@ -7,6 +7,11 @@ module.exports = {
   entry: {
     application: "./app/javascript/application.js"
   },
+  // resolve: {
+  //   alias: {
+  //     'flowbite': 'flowbite/dist/flowbite.turbo.js',
+  //   },
+  // },
   performance: {
     maxEntrypointSize: 512000,
     maxAssetSize: 512000
