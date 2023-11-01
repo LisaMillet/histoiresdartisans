@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     sign_in: 'admin'
   }, controllers: { registrations: 'users/registrations' }
   root to: "pages#home"
-  
+
   resources :contacts, only: %i[new create]
   get 'contacts/sent', to: 'contacts#sent', as: 'sent_contact'
   get '/qui_sommes_nous', to: 'pages#about', as: 'about'
@@ -33,4 +33,7 @@ Rails.application.routes.draw do
 
   # Posts with SAAS
   resources :posts, only: %i[index new create show destroy edit update]
+
+  # Legal
+  get '/mentionslegales', to: 'pages#legal', as: 'legal'
 end
