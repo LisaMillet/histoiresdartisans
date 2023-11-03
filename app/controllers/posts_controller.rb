@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to posts_path, notice: "Votre post est publié." }
+        format.html { redirect_to posts_path, notice: "Votre article est publié." }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.update(post_params)
         # from post_url to post_path
-        format.html { redirect_to post_path(@post), notice: "Post was successfully updated." }
+        format.html { redirect_to post_path(@post), notice: "Votre article a été mis à jour." }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,7 +54,7 @@ class PostsController < ApplicationController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_path, notice: "Post was successfully destroyed." }
+      format.html { redirect_to posts_path, notice: "Votre article a bien été supprimé." }
       format.json { head :no_content }
     end
   end
