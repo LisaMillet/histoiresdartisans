@@ -4,6 +4,7 @@
   <div class="form-inputs">
     <%= f.input :title, label:"Titre", input_html: {class:"mb-3 mx-2 rounded-xl"} %>
     <%= f.input :author, label:"Auteur(e)", input_html: {class:"mb-3 mx-2 rounded-xl"} %>
+    <%= f.input :summary, label:"Résumé", input_html: {class:"mb-3 mx-2 rounded-xl"} %>
     <%= f.input :photo, as: :file, label:"Photo de couverture", input_html: {class:"mx-2 text-sm text-gray-900 rounded-e-xl cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"}, label_html: {class:""} %>
     <%= f.input :content, as: :text, class: "tinymce" %>
   </div>
