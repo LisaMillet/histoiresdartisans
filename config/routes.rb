@@ -32,7 +32,14 @@ Rails.application.routes.draw do
   get 'articles/civ', to: 'articles#civ', as: 'articleciv'
 
   # Posts with SAAS
-  resources :posts, only: %i[index new create show destroy edit update]
+  # resources :posts, only: %i[index new create show destroy edit update]
+  get 'blog', to: 'posts#index', as: 'posts'
+  get 'blog/new', to: 'posts#new', as: 'new_post'
+  post 'blog', to: 'posts#create'
+  get 'blog/:id', to: 'posts#show', as: 'post'
+  get 'blog/:id/edit', to: 'posts#edit', as: 'edit_post'
+  patch 'blog/:id', to: 'posts#update'
+  delete 'blog/:id', to: 'posts#destroy'
 
   # Legal
   get '/mentionslegales', to: 'pages#legal', as: 'legal'
