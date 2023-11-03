@@ -3,7 +3,7 @@
     <div class="flex items-center justify-center h-full w-full bg-beige bg-opacity-80">
         <div class="text-center lg:px-28 px-2 mx-auto">
             <h1 class="">Histoires d'Artisans</h1>
-            <p class=" mb-3 text-green font-bold max-w-5xl mx-auto">
+            <p class=" mb-3  font-bold max-w-5xl mx-auto">
               L’association qui valorise l’ingénierie des artisans d’art en mettant en avant l’innovation et la recherche au sein des ateliers.
             </p>
         </div>
@@ -11,45 +11,51 @@
 </div>
 
 <%# Infos %>
-<div class='lg:px-28 px-2 mx-auto my-3'>
+<div class='lg:px-28 px-8 mx-auto my-3'>
   <h2 class=" my-6">Nous découvrir</h2>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
     <%# Notre mission %>
-    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center ">
-      <a target="_blank" href="<%= about_path %>">
-        <img class="h-[250px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1679515707/HdA/Fond%20Beige%20et%20Orange/Beige_Orange_5_yxkj5z.jpg" alt="La mission de Histoires d'Artisans" />
-      </a>
+    <div class="bg-beige grid grid-cols-2 h-full justify-self-center lg:grid-cols-1 lg:w-[400px] rounded-sm">
+      <div>
+        <a target="_blank" href="<%= about_path %>">
+          <img class="h-[250px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1679515707/HdA/Fond%20Beige%20et%20Orange/Beige_Orange_5_yxkj5z.jpg" alt="La mission de Histoires d'Artisans" />
+        </a>
+      </div>
       <div class="p-3">
         <a target="_blank" href="<%= about_path %>">
-          <h3 class="text-green mb-2">Notre mission</h3>
-          <p class=" mb-3 text-green">Découvrez nos actions pour valoriser le savoir-faire intellectuel de l'artisan d'art, expert en matériaux</p>
+          <h3 class=" mb-2">Notre mission</h3>
+          <p class=" mb-3 ">Découvrez nos actions pour valoriser le savoir-faire intellectuel de l'artisan d'art, expert en matériaux</p>
         </a>
       </div>
     </div>
 
     <%# Nous soutenir %>
-    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center ">
+    <div class="bg-beige grid grid-cols-2 h-full justify-self-center lg:grid-cols-1 lg:w-[400px] rounded-sm">
+    <div>
       <a target="_blank" href="<%= support_path %>">
         <img class="h-[250px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1679515705/HdA/Fond%20Beige%20et%20Orange/Beige_Orange_8_gdpunx.jpg" alt="Répertoire des artisans Histoires d'Artisans" />
       </a>
+    </div>
       <div class="p-3">
         <a target="_blank" href="<%= support_path %>">
-          <h3 class="text-green mb-2">Nous soutenir</h3>
-          <p class=" mb-3 text-green">Soutenez nos actions grâce au don</p>
+          <h3 class=" mb-2">Nous soutenir</h3>
+          <p class=" mb-3 ">Soutenez nos actions grâce au don</p>
         </a>
       </div>
     </div>
 
     <%# Notre blog %>
-    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center ">
+    <div class="bg-beige grid grid-cols-2 h-full justify-self-center lg:grid-cols-1 lg:w-[400px] rounded-sm">
+    <div>
       <a target="_blank" href="<%= posts_path %>">
         <img class="h-[250px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1679515707/HdA/Fond%20Beige%20et%20Orange/Beige_Orange_5_yxkj5z.jpg" alt="La mission de Histoires d'Artisans" />
       </a>
+    </div>
       <div class="p-3">
         <a target="_blank" href="<%= posts_path %>">
-          <h3 class="text-green mb-2">Nos articles</h3>
-          <p class=" mb-3 text-green">Entrez dans l'univers de l'artisanat d'art à travers notre blog.</p>
+          <h3 class=" mb-2">Nos articles</h3>
+          <p class=" mb-3 ">Entrez dans l'univers de l'artisanat d'art à travers notre blog.</p>
         </a>
       </div>
     </div>
@@ -58,45 +64,45 @@
 </div>
 
 <%# actualités %>
-<div class='lg:px-28 px-2 mx-auto my-3'>
+<div class='lg:px-28 px-8 mx-auto my-3'>
   <h2 class=" my-6">Nos actualités</h2>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
     <%# Nos carnets des innovations %>
-    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
+    <div class="bg-beige grid grid-cols-2 h-full justify-self-center lg:grid-cols-1 lg:w-[400px] rounded-sm">
       <a target="_blank" href="<%= notebooks_path %>">
         <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1696257133/HdA/LisaMillet-HistoiresDartisans-_TipiiAtelier_11_retouche_djmgub.jpg" alt="Les carnets des innovations de Histoires d'Artisans" />
       </a>
       <div class="p-3">
         <a target="_blank" href="<%= notebooks_path %>">
-          <h3 class="text-green mb-2">Nos carnets des innovations</h3>
-          <p class=" mb-3 text-green">Inspirez-vous grâce à nos portraits d'artisans qui ont repoussé les limites de leur matière</p>
+          <h3 class=" mb-2">Nos carnets des innovations</h3>
+          <p class=" mb-3 ">Inspirez-vous grâce à nos portraits d'artisans qui ont repoussé les limites de leur matière</p>
         </a>
       </div>
     </div>
 
     <%# L'OeM %>
-    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
+    <div class="bg-beige grid grid-cols-2 h-full justify-self-center lg:grid-cols-1 lg:w-[400px] rounded-sm">
       <a target="_blank" href="https://www.loutilenmain.fr/blog-actus?modal_page=custom-page-detail&modal_detail_id=102545-l-association-l-outil-en-main-pantin-celebre-le-patrimoine-et-la-transmission-artisanale-lors-de-l-evenement-patrimoine-en-transmission/">
         <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1693682722/HdA/Partenaires/L%27Outil%20en%20Main/LOeM_Bettencourt_Atelier_PIM33_m4zzaa.png" alt="L'Outil en Main France" />
       </a>
       <div class="p-3">
         <a target="_blank" href="https://www.loutilenmain.fr/blog-actus?modal_page=custom-page-detail&modal_detail_id=102545-l-association-l-outil-en-main-pantin-celebre-le-patrimoine-et-la-transmission-artisanale-lors-de-l-evenement-patrimoine-en-transmission">
-          <h3 class="text-green mb-2">L'Outil en Main France</h3>
-          <p class=" mb-3 text-green">Découvrez notre événement Patrimoine en transmission dans le cadre des Journées Européennes du Patrimoine.</p>
+          <h3 class=" mb-2">L'Outil en Main France</h3>
+          <p class=" mb-3 ">Découvrez notre événement Patrimoine en transmission dans le cadre des Journées Européennes du Patrimoine.</p>
         </a>
       </div>
     </div>
 
     <%# CIV %>
-    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
+    <div class="bg-beige grid grid-cols-2 h-full justify-self-center lg:grid-cols-1 lg:w-[400px] rounded-sm">
       <a target="_blank" href="<%= civ_path %>">
         <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1683888052/HdA/Partenaires/CIV/Partenaire_CIV_1_vmkujy.jpg" alt="Centre International du Vitrail" />
       </a>
       <div class="p-3">
         <a target="_blank" href="<%= civ_path %>">
-          <h3 class="text-green mb-2">Centre International du Vitrail</h3>
-          <p class="te xt-3xl lg:text-base font-sans mb-3 text-green">Découvrez notre partenariat avec le Centre International du Vitrail</p>
+          <h3 class=" mb-2">Centre International du Vitrail</h3>
+          <p class="mb-3 ">Découvrez notre partenariat avec le Centre International du Vitrail</p>
         </a>
       </div>
     </div>
@@ -104,62 +110,62 @@
 </div>
 
 <%# Podcast %>
-<div class='lg:px-28 px-2 mx-auto my-3'>
+<div class='lg:px-28 px-8 mx-auto my-3'>
   <h2 class=" my-6">Nos derniers épisodes de podcast</h2>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
     <%# Soumia Luquet %>
-    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
+    <div class="bg-beige grid grid-cols-2 h-full justify-self-center lg:grid-cols-1 lg:w-[400px] rounded-sm">
       <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1698404079/HdA/Podcast/LisaMillet_HistoiresDartisans_LaMaisonLuquet_SoumiaLuquet_67_wq0gui.jpg" alt="Soumia Luquet" />
       <div class="p-3">
-        <h3 class="text-green mb-2">Soumia Luquet</h3>
+        <h3 class=" mb-2">Soumia Luquet</h3>
         <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/35-idees-recues-taillandiers">
-          <p class=" mb-3 text-green">Idées-reçues</p>
+          <p class=" mb-3 ">Idées-reçues</p>
         </a>
         <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/36-soumia-luquet-directrice-la-maison-luquet">
-          <p class=" mb-3 text-green">Interview</p>
+          <p class=" mb-3 ">Interview</p>
         </a>
       </div>
     </div>
 
     <%# Samuel Latour %>
-    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
+    <div class="bg-beige grid grid-cols-2 h-full justify-self-center lg:grid-cols-1 lg:w-[400px] rounded-sm">
       <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1694534735/HdA/Podcast/LisaMillet_HistoiresDartisans_SamuelLatour_bis_18_nt4wds.jpg" alt="Samuel Latour" />
       <div class="p-3">
-        <h3 class="text-green mb-2">Samuel Latour</h3>
+        <h3 class=" mb-2">Samuel Latour</h3>
         <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/33-idees-recues-artistes-artisans-tourneurs">
-          <p class=" mb-3 text-green">Idées-reçues</p>
+          <p class=" mb-3 ">Idées-reçues</p>
         </a>
         <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/34-samuel-latour-artiste-sculpteur">
-          <p class=" mb-3 text-green">Interview</p>
+          <p class=" mb-3 ">Interview</p>
         </a>
       </div>
     </div>
 
     <%# Valérie Tanfin %>
-    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
+    <div class="bg-beige grid grid-cols-2 h-full justify-self-center lg:grid-cols-1 lg:w-[400px] rounded-sm">
       <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1694534730/HdA/Podcast/LisaMillet_HistoiresDartisans_ValerieTanfin_20_fpukqu.jpg" alt="Valérie Tanfin" />
       <div class="p-3">
-        <h3 class="text-green mb-2">Valérie Tanfin</h3>
+        <h3 class=" mb-2">Valérie Tanfin</h3>
         <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/31-idees-recues-plumasserie">
-          <p class=" mb-3 text-green">Idées-reçues</p>
+          <p class=" mb-3 ">Idées-reçues</p>
         </a>
         <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/32-valerie-tanfin-plumassiere">
-          <p class=" mb-3 text-green">Interview</p>
+          <p class=" mb-3 ">Interview</p>
         </a>
       </div>
     </div>
 
     <%# Marion Saussier %>
-    <div class="bg-beige rounded-sm h-full w-[400px] justify-self-center shadow mx-20">
+    <div class="bg-beige grid grid-cols-2 h-full justify-self-center lg:grid-cols-1 lg:w-[400px] rounded-sm">
       <img class="h-[200px] object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1694534725/HdA/Podcast/LisaMillet_HistoiresDartisans_MaisonAlivon_MarionSaussier_1_dulyoz.jpg" alt="Marion Saussier - Maison Alivon" />
       <div class="p-3">
-        <h3 class="text-green mb-2">Marion Saussier - Maison Alivon</h3>
+        <h3 class=" mb-2">Marion Saussier - Maison Alivon</h3>
         <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/29-ideesrecues-marion-saussier-fondeur-caractere-bronze">
-          <p class=" mb-3 text-green">Idées-reçues</p>
+          <p class=" mb-3 ">Idées-reçues</p>
         </a>
         <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/30-marion-saussier-maison-alivon">
-          <p class=" mb-3 text-green">Interview</p>
+          <p class=" mb-3 ">Interview</p>
         </a>
       </div>
     </div>
