@@ -42,6 +42,14 @@
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+
+    <script>
+    function loadScript(a){
+      var b=document.getElementsByTagName("head")[0],c=document.createElement("script");
+      c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}
+      loadScript(function(){beTracker.t({hash:"2cc39a0f4635b5bcf671fe3601a9c612"})});
+    </script>
+
   </head>
   <body class="bg-beige" id="<%= controller_name %>-<%= action_name %>">
     <%= render 'shared/navbar' %>
