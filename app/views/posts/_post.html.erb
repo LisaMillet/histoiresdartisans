@@ -1,13 +1,13 @@
-<div class="bg-orange rounded-sm h-full justify-self-center">
+<div class="h-[450px] bg-orange rounded-sm justify-self-center">
   <%= link_to post_path(post) do %>
     <%# picture of a post %>
-      <% if post.photo.key.present? %>
-        <div>
-          <%= cl_image_tag post.photo.key, class:"h-[350px] object-cover rounded-sm w-full" %>
-        </div>
-      <% end %>
+    <% if post.photo.key.present? %>
+      <div>
+        <%= cl_image_tag post.photo.key, class:"h-[200px] object-cover rounded-sm w-full" %>
+      </div>
+    <% end %>
     <div class="p-3">
-      <h3 class="text-beige mb-3"><%= post.title.size > 50 ? post.title.first(30) << "..." : post.title %></h3>
+      <h3 class="text-beige mb-3"><%= post.title %></h3>
       <p class="mb-5 text-beige">Par <%= post.author %></p>
       <p class="mb-4 text-beige"><%= post.summary %></p>
     </div>
