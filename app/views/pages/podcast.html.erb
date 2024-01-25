@@ -6,6 +6,7 @@
     </div>
 </div>
 
+<%# Intro %>
 <div class='lg:px-28 px-8 mx-auto my-3'>
   <div>
     <h2 class="my-4">Ecoutez les épisodes</h2>
@@ -21,17 +22,113 @@
       <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkLmF1c2hhLmNvL3lYTGdxQ1hZN0Q1eg%3D%3D" class="text-green hover:text-orange text-8xl lg:text--xl"><i class="fa-brands fa-google"></i></a>
     </div>
   </div>
-  <div class="lg:block">
-    <h2 class="">Découvrez les derniers épisodes</h2>
-    <iframe
-      name="Ausha Podcast Player"
-      frameborder="0"
-      loading="lazy"
-      id="ausha-MQoK"
-      height="500"
-      style="border: none; width:100%; height:500px"
-      src="https://player.ausha.co/index.html?showId=yXLgqCXY7D5z&display=horizontal&color=%2300594F&multishow=true&playlist=true&v=3&playerId=ausha-MQoK">
-    </iframe>
-    <script src="https://player.ausha.co/ausha-player.js"></script>
+</div>
+
+<%# Episodes %>
+<div class='lg:px-28 px-8 mx-auto my-3'>
+  <h2 class="my-6">Découvrez les épisodes</h2>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap 4">
+
+    <%# Adrien Jaminet %>
+    <div class="px-2 bg-beige rounded-sm h-full justify-self-center">
+        <img class="object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1706176402/HdA/AdrienJaminet_TrompetteAlfred_tqrpbt.jpg" alt="Adrien Jaminet" />
+      <div class="p-3">
+        <h3 class="mb-2">Adrien Jaminet</h3>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/41-histoire-de-la-trompette">
+          <p class=" mb-3 ">Histoire</p>
+        </a>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/42-adrien-jaminet-facteur-cuivres-trompettes">
+          <p class=" mb-3 ">Interview</p>
+        </a>
+      </div>
+    </div>
+
+    <%# Aurore Bouter %>
+    <div class="px-2 bg-beige rounded-sm h-full justify-self-center">
+        <img class="object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1699003710/HdA/AuroreBouter_Cementation_CreditsVirginie_Lambinet_10_agbac4.jpg" alt="Aurore Bouter" />
+      <div class="p-3">
+        <h3 class="mb-2">Aurore Bouter</h3>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/idees-recues-verriers">
+          <p class=" mb-3 ">Histoire</p>
+        </a>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/aurore-bouter-maitre-artisane-verrier">
+          <p class=" mb-3 ">Interview</p>
+        </a>
+      </div>
+    </div>
+
+    <%# Les Métalliers Champenois %>
+    <div class="px-2 bg-beige rounded-sm h-full justify-self-center">
+        <img class="object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1706176402/HdA/LisaMillet_HistoiresDartisans_LesMetalliersChampenois_30_htseof.jpg" alt="Les Métalliers Champenois" />
+      <div class="p-3">
+        <h3 class="mb-2">Les Métalliers Champenois</h3>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/37-eric-delory-metalliers-les-metalliers-champenois">
+          <p class=" mb-3 ">Eric Delory</p>
+        </a>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/37-julien-lacroix-ferronnier-chez-les-metalliers-champenois">
+          <p class=" mb-3 ">Julien Lacroix</p>
+        </a>
+      </div>
+    </div>
+
+    <%# Soumia Luquet %>
+    <div class="px-2 bg-beige rounded-sm h-full justify-self-center">
+        <img class="object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1698404079/HdA/Podcast/LisaMillet_HistoiresDartisans_LaMaisonLuquet_SoumiaLuquet_67_wq0gui.jpg" alt="Soumia Luquet" />
+      <div class="p-3">
+        <h3 class="mb-2">Soumia Luquet</h3>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/35-idees-recues-taillandiers">
+          <p class=" mb-3 ">Idées-reçues</p>
+        </a>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/36-soumia-luquet-directrice-la-maison-luquet">
+          <p class=" mb-3 ">Interview</p>
+        </a>
+      </div>
+    </div>
+
+
+    <%# Samuel Latour %>
+    <div class="px-2 bg-beige rounded-sm h-full justify-self-center">
+        <img class="object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1699034642/HdA/Podcast/LisaMillet_HistoiresDartisans_SamuelLatour_biscropped_18_xauqti.jpg" alt="Samuel Latour" />
+      <div class="p-3">
+        <h3 class="mb-2">Samuel Latour</h3>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/33-idees-recues-artistes-artisans-tourneurs">
+          <p class=" mb-3 ">Histoire</p>
+        </a>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/34-samuel-latour-artiste-sculpteur">
+          <p class=" mb-3 ">Interview</p>
+        </a>
+      </div>
+    </div>
+
+
+    <%# Valérie Tanfin %>
+    <div class="px-2 bg-beige rounded-sm h-full justify-self-center">
+        <img class="object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1694534730/HdA/Podcast/LisaMillet_HistoiresDartisans_ValerieTanfin_20_fpukqu.jpg" alt="Valérie Tanfin" />
+      <div class="p-3">
+        <h3 class="mb-2">Valérie Tanfin</h3>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/31-idees-recues-plumasserie">
+          <p class=" mb-3 ">Histoire</p>
+        </a>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/32-valerie-tanfin-plumassiere">
+          <p class=" mb-3 ">Interview</p>
+        </a>
+      </div>
+    </div>
+
+    <%# Marion Saussier %>
+    <div class="px-2 bg-beige rounded-sm h-full justify-self-center">
+        <img class="object-cover rounded-sm w-full" src="https://res.cloudinary.com/dvuyabyaw/image/upload/v1694534725/HdA/Podcast/LisaMillet_HistoiresDartisans_MaisonAlivon_MarionSaussier_1_dulyoz.jpg" alt="Marion Saussier - Maison Alivon" />
+      <div class="p-3">
+        <h3 class="mb-2">Marion Saussier - Maison Alivon</h3>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/29-ideesrecues-marion-saussier-fondeur-caractere-bronze">
+          <p class=" mb-3 ">Histoire</p>
+        </a>
+        <a target="_blank" href="https://smartlink.ausha.co/histoiresdartisans/30-marion-saussier-maison-alivon">
+          <p class=" mb-3 ">Interview</p>
+        </a>
+      </div>
+    </div>
+
+
   </div>
 </div>
