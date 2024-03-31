@@ -3,11 +3,11 @@
     <%# picture of a post %>
     <% if post.photo.key.present? %>
       <div>
-        <%= cl_image_tag post.photo.key, class:"h-[200px] object-cover rounded-sm w-full" %>
+        <%= cl_image_tag post.photo.key, class:"h-[300px] object-cover rounded-sm w-full" %>
       </div>
     <% end %>
     <div class="p-3">
-      <h3 class="text-orange mb-3 overflow-hidden h-[200px]"><%= post.title %></h3>
+      <h3 class="text-orange mb-3 overflow-hidden h-[100px]"><%= post.title %></h3>
       <p class="mb-4 text-orange">Par <%= post.author %></p>
       <p class="mb-4 text-orange overflow-hidden h-[200px]"><%= post.summary %></p>
     <% end %>
