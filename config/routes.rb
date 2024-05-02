@@ -19,8 +19,6 @@ Rails.application.routes.draw do
 
   # Partenariats
   get '/partenariat', to: 'pages#partnership', as: 'partnership'
-  get 'partenariat/civ', to: 'partnership#civ', as: 'civ'
-  get 'partenariat/loem', to: 'partnership#loem', as: 'loem'
 
   # Carnets des innovations w/ prospects
   get 'carnets_des_innovations', to: 'pages#notebooks', as: 'notebooks'
