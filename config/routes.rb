@@ -32,10 +32,10 @@ Rails.application.routes.draw do
   # Posts with SAAS
   # resources :posts, only: %i[index new create show destroy edit update]
   get 'blog', to: 'posts#index', as: 'posts'
-  get 'blog/new', to: 'posts#new', as: 'new_post'
+  get 'blog/nouvel-article', to: 'posts#new', as: 'new_post'
   post 'blog', to: 'posts#create'
   get 'blog/:id', to: 'posts#show', as: 'post'
-  get 'blog/:id/edit', to: 'posts#edit', as: 'edit_post'
+  get 'blog/:id/modifier-article', to: 'posts#edit', as: 'edit_post'
   patch 'blog/:id', to: 'posts#update'
   delete 'blog/:id', to: 'posts#destroy'
 
